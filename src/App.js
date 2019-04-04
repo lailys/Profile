@@ -1,25 +1,109 @@
 import React, { Component } from 'react';
-import logo from './logo.svg';
 import './App.css';
+import Header from './components/Header'
+import Front from './components/Front'
+import Footer from './components/Footer'
+import * as Waypoint from 'react-waypoint'
+
+
+
 
 class App extends Component {
+
+  state={
+    top:'0',
+    endTop:'-10%',
+
+        }
+      
+        componentDidMount() {
+          window.addEventListener('scroll', this.handleScroll);
+        };
+        
+        componentWillUnmount() {
+          window.removeEventListener('scroll', this.handleScroll);
+        };
+
+        handleScroll=(e)=> {
+          const p=e.path[1].scrollY || e.composedPath()[1].scrollY
+          console.log(e.path[1].scrollY)
+          
+          if(p>=0 && p<120 ){
+
+            this.setState({top:'0',endTop:'-10%'})
+
+          }else if(p>121 &&p<700){
+         
+            this.setState({top:'102%'})
+            if(p>130){
+              this.setState({endTop:'96%'})
+            }
+
+
+          }else if(p>701 ) {
+
+            this.setState({top:'202%'})
+          
+          if(p>1010){
+            this.setState({endTop:'198%'})
+          }
+        }
+        };       
+        
+        scrollStepT() {
+          if (window.pageYOffset === 0) {
+              clearInterval(this.state.intervalId);
+          }
+          window.scroll(0, window.pageYOffset - this.props.scrollStepInPx);
+        }
+      
+
+        scrollStepA() {
+          if (window.pageYOffset === 0) {
+              clearInterval(this.state.intervalId);
+          }
+          window.scroll(0, 660);
+        }
+      
+        scrollStepW() {
+          if (window.pageYOffset === 0) {
+              clearInterval(this.state.intervalId);
+          }
+          window.scroll(0, 2835);
+        }
+       
+
+        setId=(e)=>{
+          const p=e.target.className
+          if(p==="logo"){
+            let intervalId = setInterval(this.scrollStepT());
+            this.setState({ intervalId: intervalId });
+          }else if(p==="about"){
+            let intervalId = setInterval(this.scrollStepA());
+            this.setState({ intervalId: intervalId });
+          }else if(p==="work"){
+            let intervalId = setInterval(this.scrollStepW());
+            this.setState({ intervalId: intervalId });
+          }
+        }
+
   render() {
     return (
-      <div className="App">
-        <header className="App-header">
-          <img src={logo} className="App-logo" alt="logo" />
-          <p>
-            Edit <code>src/App.js</code> and save to reload.
-          </p>
-          <a
-            className="App-link"
-            href="https://reactjs.org"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Learn React
-          </a>
-        </header>
+      <div className="App" >
+          <div className="header" style={{top:this.state.top}}>
+                <a className="logo" onClick={(e) =>this.setId(e)}>LailyS</a>
+                <a className="about" onClick={(e) =>this.setId(e)}> About</a>
+                <a className="work"  onClick={(e)=>this.setId(e)}> Work</a>
+          </div>
+          <div className="page-end" style={{top:this.state.endTop}}>
+                <div className="line">.</div>
+                <div className="line">.</div>
+                <div className="line">.</div>
+          </div>
+         
+     <Front/>
+     
+     <Footer/>
       </div>
     );
   }
