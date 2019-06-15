@@ -28,11 +28,11 @@ class App extends Component {
           const p=e.path[1].scrollY || e.composedPath()[1].scrollY
           console.log(e.path[1].scrollY)
           
-          if(p>=0 && p<120 ){
+          if(p>=0 && p<76 ){
 
             this.setState({top:'0',endTop:'-10%'})
 
-          }else if(p>121 &&p<700){
+          }else if(p>77 &&p<1056){
          
             this.setState({top:'102%'})
             if(p>130){
@@ -40,7 +40,7 @@ class App extends Component {
             }
 
 
-          }else if(p>701 ) {
+          }else if(p>1057 ) {
 
             this.setState({top:'202%'})
           
@@ -62,7 +62,7 @@ class App extends Component {
           if (window.pageYOffset === 0) {
               clearInterval(this.state.intervalId);
           }
-          window.scroll(0, 700);
+          window.scroll(0, 998);
         }
       
         scrollStepW() {
