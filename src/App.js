@@ -13,7 +13,7 @@ class App extends Component {
   state={
     top:'0',
     endTop:'-10%',
-    p:""
+    r:""
 
         }
       
@@ -28,11 +28,9 @@ class App extends Component {
         handleScroll=(e)=> {
           const p=e.composedPath()[1].scrollY
           console.log(p)
-        
-          const isChrome = !!window.chrome && (!!window.chrome.webstore || !!window.chrome.runtime);
-          const isSafari = /constructor/i.test(window.HTMLElement) || (function (p) { return p.toString() === "[object SafariRemoteNotification]"; })(!window['safari'] );
-          console.log(window.orientation)
-          console.log(navigator.userAgent.indexOf('IEMobile')!==-1)
+          console.log(e)
+          this.setState({r:navigator.userAgent.indexOf('IEMobile')})
+         
           if(navigator.userAgent.indexOf('IEMobile')!==-1 || typeof window.orientation !== "undefined"){
             if(p>=0 && p<32){
 
@@ -100,6 +98,7 @@ class App extends Component {
               clearInterval(this.state.intervalId);
           }
           window.scroll(0, 700);}
+         
           else {
             if (window.pageYOffset === 0) {
               clearInterval(this.state.intervalId);
@@ -145,6 +144,7 @@ class App extends Component {
                 <a className="work"  onClick={(e)=>this.setId(e)}> Work</a>
           </div>
           <div className="page-end" style={{top:this.state.endTop}}>
+            <div>{this.state.r}</div>
                 <div className="line">.</div>
                 <div className="line">.</div>
                 <div className="line">.</div>
