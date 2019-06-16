@@ -33,7 +33,7 @@ class App extends Component {
           const isSafari = /constructor/i.test(window.HTMLElement) || (function (p) { return p.toString() === "[object SafariRemoteNotification]"; })(!window['safari'] );
           console.log(window.orientation)
           console.log(navigator.userAgent.indexOf('IEMobile')!==-1)
-          if(navigator.userAgent.indexOf('IEMobile')!==-1){
+          if(navigator.userAgent.indexOf('IEMobile')!==-1 || typeof window.orientation !== "undefined"){
             if(p>=0 && p<32){
 
               this.setState({top:'0',endTop:'-10%'})
