@@ -124,27 +124,35 @@ class App extends Component {
       
 
         scrollStepA() {
+          if(navigator.userAgent.match(/iPhone/i)!== null){
+            if(navigator.userAgent.match(/iPhone/i)[0]==="iPhone"){
+
+
+
+              if (window.pageYOffset === 0) {
+                clearInterval(this.state.intervalId);
+                
+            }
+            window.scroll(0, 678);
+
+            }}else if(!!window.chrome){
+              if (window.pageYOffset === 0) {
+                clearInterval(this.state.intervalId);
+            }
+            window.scroll(0, 700);
+            }else if(/android/i.test(navigator.userAgent)){
+            
+            }else{
+              if (window.pageYOffset === 0) {
+                clearInterval(this.state.intervalId);
+                
+            }
+            window.scroll(0, 760)
+            }
           
        
 
-          if(!!window.chrome) {
-            if (window.pageYOffset === 0) {
-              clearInterval(this.state.intervalId);
-          }
-          window.scroll(0, 700);}
-         
-          else {
-            if (window.pageYOffset === 0) {
-              clearInterval(this.state.intervalId);
-          }
-
-          if(navigator.userAgent.match(/iPhone/i)[0]==="iphon"){
-            window.scroll(0, 390);
-          }else{
-
-          }window.scroll(0, 760);
-          
-        }
+       
         }
       
         scrollStepW() {
