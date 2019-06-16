@@ -33,26 +33,51 @@ class App extends Component {
           const isSafari = /constructor/i.test(window.HTMLElement) || (function (p) { return p.toString() === "[object SafariRemoteNotification]"; })(!window['safari'] );
           console.log(isChrome)
           console.log(!!window.chrome)
-          if(p>=0 && p<76 ){
+          if(navigator.userAgent.indexOf('IEMobile')){
+            if(p>=0 && p<32){
 
-            this.setState({top:'0',endTop:'-10%'})
-
-          }else if(p>77 &&p<1056){
-         
-            this.setState({top:'102%'})
-            if(p>130){
-              this.setState({endTop:'96%'})
+              this.setState({top:'0',endTop:'-10%'})
+  
+            }else if(p>33 &&p<415){
+           
+              this.setState({top:'102%'})
+              if(p>130){
+                this.setState({endTop:'96%'})
+              }
+  
+  
+            }else if(p>415 ) {
+  
+              this.setState({top:'202%'})
+            
+            if(p>1010){
+              this.setState({endTop:'198%'})
             }
-
-
-          }else if(p>1057 ) {
-
-            this.setState({top:'202%'})
-          
-          if(p>1010){
-            this.setState({endTop:'198%'})
           }
-        }
+
+          }else{
+            if(p>=0 && p<76 ){
+
+              this.setState({top:'0',endTop:'-10%'})
+  
+            }else if(p>77 &&p<1056){
+           
+              this.setState({top:'102%'})
+              if(p>130){
+                this.setState({endTop:'96%'})
+              }
+  
+  
+            }else if(p>1057 ) {
+  
+              this.setState({top:'202%'})
+            
+            if(p>1010){
+              this.setState({endTop:'198%'})
+            }
+          }
+          }
+      
         };       
         
         scrollStepT() {
@@ -69,7 +94,7 @@ class App extends Component {
         scrollStepA() {
           const isChrome = !!window.chrome && (!!window.chrome.webstore || !!window.chrome.runtime);
          
-          console.log(isChrome)
+          console.log(navigator.userAgent.indexOf('IEMobile'))
           if(!!window.chrome) {
             if (window.pageYOffset === 0) {
               clearInterval(this.state.intervalId);
