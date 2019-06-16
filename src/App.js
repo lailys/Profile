@@ -112,7 +112,7 @@ class App extends Component {
               clearInterval(this.state.intervalId);
           }
 
-          if(navigator.userAgent.indexOf('IEMobile')){
+          if(navigator.userAgent.match(/iPhone/i)[0]==="iphon"){
             window.scroll(0, 390);
           }else{
 
