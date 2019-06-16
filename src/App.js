@@ -67,12 +67,12 @@ class App extends Component {
         scrollStepA() {
           const isChrome = !!window.chrome && (!!window.chrome.webstore || !!window.chrome.runtime);
          
-        
+          console.log(isChrome)
           if(isChrome) {
             if (window.pageYOffset === 0) {
               clearInterval(this.state.intervalId);
           }
-          window.scroll(0, 600);}
+          window.scroll(0, 500);}
           else {
             if (window.pageYOffset === 0) {
               clearInterval(this.state.intervalId);
