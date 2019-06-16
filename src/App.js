@@ -36,6 +36,14 @@ class App extends Component {
             this.setState({r:navigator.userAgent.match(/iPhone/i)[0]})
           }
          
+          if(navigator.userAgent.match(/Chrome/i)!== null){
+            console.log(navigator.userAgent.match(/Chrome/i)[0])
+            this.setState({r:navigator.userAgent.match(/Chrome/i)[0]})
+          }
+          if(navigator.userAgent.match(/Safari/i)!== null){
+            console.log(navigator.userAgent.match(/Safari/i)[0])
+            this.setState({r:navigator.userAgent.match(/Safari/i)[0]})
+          }
 
 
           if(!!window.chrome){
@@ -148,6 +156,7 @@ class App extends Component {
   render() {
     return (
       <div className="App" >
+       
           <div className="header" style={{top:this.state.top}}>
                 <a className="logo" onClick={(e) =>this.setId(e)}>LailyS</a>
                 <div>{this.state.r}</div>

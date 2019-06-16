@@ -17,7 +17,6 @@ class Front extends Component {
             <div className="front" >
                 <div className="parts a">
                 <div className="title" >
-               
                 <div className="title-a">Web</div>
                 <div className="title-b">de</div>
                 <div className="title-c">V</div>
