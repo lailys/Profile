@@ -37,8 +37,10 @@ class App extends Component {
           }else if(!!window.chrome){
             console.log("chrome")
             this.setState({r:"chrome"})
+          }else if(/android/i.test(navigator.userAgent)){
+            this.setState({r:"android"})
           }else{
-            his.setState({r:"safari"})
+            this.setState({r:"safari"})
           }
         
 
