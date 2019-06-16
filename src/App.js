@@ -104,7 +104,14 @@ class App extends Component {
             if (window.pageYOffset === 0) {
               clearInterval(this.state.intervalId);
           }
-          window.scroll(0, 760);}
+
+          if(navigator.userAgent.indexOf('IEMobile')){
+            window.scroll(0, 390);
+          }else{
+
+          }window.scroll(0, 760);
+          
+        }
         }
       
         scrollStepW() {
