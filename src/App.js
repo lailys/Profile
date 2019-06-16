@@ -28,10 +28,11 @@ class App extends Component {
         handleScroll=(e)=> {
           const p=e.composedPath()[1].scrollY
           console.log(p)
-
+        
           const isChrome = !!window.chrome && (!!window.chrome.webstore || !!window.chrome.runtime);
           const isSafari = /constructor/i.test(window.HTMLElement) || (function (p) { return p.toString() === "[object SafariRemoteNotification]"; })(!window['safari'] );
-          
+          console.log(isChrome)
+          console.log(!!window.chrome)
           if(p>=0 && p<76 ){
 
             this.setState({top:'0',endTop:'-10%'})
@@ -55,9 +56,10 @@ class App extends Component {
         };       
         
         scrollStepT() {
+          
           const isChrome = !!window.chrome && (!!window.chrome.webstore || !!window.chrome.runtime);
           const isSafari = /constructor/i.test(window.HTMLElement) || (function (p) { return p.toString() === "[object SafariRemoteNotification]"; })(!window['safari'] );
-          if(isChrome) {if (window.pageYOffset === 0) {
+          if(!!window.chrome) {if (window.pageYOffset === 0) {
               clearInterval(this.state.intervalId);
           }
           window.scroll(0, window.pageYOffset - this.props.scrollStepInPx);}
