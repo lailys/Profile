@@ -28,10 +28,33 @@ class App extends Component {
         handleScroll=(e)=> {
           const p=e.composedPath()[1].scrollY
           console.log(p)
-          console.log(e)
-          this.setState({r:navigator.userAgent.indexOf('IEMobile')})
+          console.log(!!window.chrome)
+          this.setState({r:!!window.chrome})
          
-          if(navigator.userAgent.indexOf('IEMobile')!==-1 || typeof window.orientation !== "undefined"){
+          if(!!window.chrome){
+            if(p>=0 && p<100 ){
+
+              this.setState({top:'0',endTop:'-10%'})
+  
+            }else if(p>101 &&p<800){
+           
+              this.setState({top:'102%'})
+              if(p>300){
+                this.setState({endTop:'96%'})
+              }
+  
+  
+            }else if(p>801 ) {
+  
+              this.setState({top:'202%'})
+            
+            if(p>801){
+              this.setState({endTop:'198%'})
+            }
+          }
+
+
+          }else{
             if(p>=0 && p<32){
 
               this.setState({top:'0',endTop:'-10%'})
@@ -52,28 +75,7 @@ class App extends Component {
               this.setState({endTop:'198%'})
             }
           }
-
-          }else{
-            if(p>=0 && p<100 ){
-
-              this.setState({top:'0',endTop:'-10%'})
-  
-            }else if(p>101 &&p<800){
-           
-              this.setState({top:'102%'})
-              if(p>130){
-                this.setState({endTop:'96%'})
-              }
-  
-  
-            }else if(p>801 ) {
-  
-              this.setState({top:'202%'})
-            
-            if(p>1010){
-              this.setState({endTop:'198%'})
-            }
-          }
+        
           }
       
         };       
