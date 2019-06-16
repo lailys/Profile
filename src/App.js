@@ -27,8 +27,11 @@ class App extends Component {
 
         handleScroll=(e)=> {
           const p=e.composedPath()[1].scrollY
-         
-          this.setState({p:p})
+          console.log(p)
+
+          const isChrome = !!window.chrome && (!!window.chrome.webstore || !!window.chrome.runtime);
+          const isSafari = /constructor/i.test(window.HTMLElement) || (function (p) { return p.toString() === "[object SafariRemoteNotification]"; })(!window['safari'] );
+          
           if(p>=0 && p<76 ){
 
             this.setState({top:'0',endTop:'-10%'})
@@ -52,18 +55,29 @@ class App extends Component {
         };       
         
         scrollStepT() {
-          if (window.pageYOffset === 0) {
+          const isChrome = !!window.chrome && (!!window.chrome.webstore || !!window.chrome.runtime);
+          const isSafari = /constructor/i.test(window.HTMLElement) || (function (p) { return p.toString() === "[object SafariRemoteNotification]"; })(!window['safari'] );
+          if(isChrome) {if (window.pageYOffset === 0) {
               clearInterval(this.state.intervalId);
           }
-          window.scroll(0, window.pageYOffset - this.props.scrollStepInPx);
+          window.scroll(0, window.pageYOffset - this.props.scrollStepInPx);}
         }
       
 
         scrollStepA() {
-          if (window.pageYOffset === 0) {
+          const isChrome = !!window.chrome && (!!window.chrome.webstore || !!window.chrome.runtime);
+         
+        
+          if(isChrome) {
+            if (window.pageYOffset === 0) {
               clearInterval(this.state.intervalId);
           }
-          window.scroll(0, 700);
+          window.scroll(0, 900);}
+          else {
+            if (window.pageYOffset === 0) {
+              clearInterval(this.state.intervalId);
+          }
+          window.scroll(0, 760);}
         }
       
         scrollStepW() {
@@ -101,7 +115,7 @@ class App extends Component {
                 <div className="line">.</div>
                 <div className="line">.</div>
           </div>
-        
+         <div>{this.state.p}</div>
      <Front/>
      
      <Footer/>
