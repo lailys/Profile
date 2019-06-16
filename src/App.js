@@ -13,6 +13,7 @@ class App extends Component {
   state={
     top:'0',
     endTop:'-10%',
+    p:""
 
         }
       
@@ -25,9 +26,9 @@ class App extends Component {
         };
 
         handleScroll=(e)=> {
-          const p=e.path[1].scrollY || e.composedPath()[1].scrollY
-          console.log(e.path[1].scrollY)
-          
+          const p=e.composedPath()[1].scrollY
+         
+          this.setState({p:p})
           if(p>=0 && p<76 ){
 
             this.setState({top:'0',endTop:'-10%'})
@@ -100,7 +101,7 @@ class App extends Component {
                 <div className="line">.</div>
                 <div className="line">.</div>
           </div>
-         
+        
      <Front/>
      
      <Footer/>
