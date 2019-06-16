@@ -74,7 +74,7 @@ class App extends Component {
             if (window.pageYOffset === 0) {
               clearInterval(this.state.intervalId);
           }
-          window.scroll(0, 670);}
+          window.scroll(0, 700);}
           else {
             if (window.pageYOffset === 0) {
               clearInterval(this.state.intervalId);
