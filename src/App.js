@@ -30,10 +30,14 @@ class App extends Component {
           console.log(navigator.userAgent)
           console.log(!!window.chrome)
           console.log(navigator.userAgent)
-          console.log( navigator.userAgent.match(/iPhone/i)[0])
+         
           console.log(p)
-          
-          
+          if(navigator.userAgent.match(/iPhone/i)!== null){
+            this.setState({r:navigator.userAgent.match(/iPhone/i)[0]})
+          }
+         
+
+
           if(!!window.chrome){
             if(p>=0 && p<100 ){
 
@@ -118,9 +122,7 @@ class App extends Component {
         }
       
         scrollStepW() {
-          if(navigator.userAgent.match(/iPhone/i)){
-
-            this.setState({r:navigator.userAgent.match(/iPhone/i)[0]})}
+          
          
           if (window.pageYOffset === 0) {
               clearInterval(this.state.intervalId);
@@ -148,11 +150,12 @@ class App extends Component {
       <div className="App" >
           <div className="header" style={{top:this.state.top}}>
                 <a className="logo" onClick={(e) =>this.setId(e)}>LailyS</a>
+                <div>{this.state.r}</div>
                 <a className="about" onClick={(e) =>this.setId(e)}> About</a>
                 <a className="work"  onClick={(e)=>this.setId(e)}> Work</a>
           </div>
           <div className="page-end" style={{top:this.state.endTop}}>
-            <div>{this.state.r}</div>
+          
                 <div className="line">.</div>
                 <div className="line">.</div>
                 <div className="line">.</div>
