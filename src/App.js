@@ -27,9 +27,12 @@ class App extends Component {
 
         handleScroll=(e)=> {
           const p=e.composedPath()[1].scrollY
-          console.log(p)
+          console.log(navigator.userAgent)
           console.log(!!window.chrome)
-          this.setState({r:!!window.chrome})
+          console.log(navigator.userAgent)
+          console.log( navigator.userAgent.match(/iPhone/i))
+          console.log(p)
+          
          
           if(!!window.chrome){
             if(p>=0 && p<100 ){
@@ -82,8 +85,7 @@ class App extends Component {
         
         scrollStepT() {
           
-          const isChrome = !!window.chrome && (!!window.chrome.webstore || !!window.chrome.runtime);
-          const isSafari = /constructor/i.test(window.HTMLElement) || (function (p) { return p.toString() === "[object SafariRemoteNotification]"; })(!window['safari'] );
+        
           if(!!window.chrome) {if (window.pageYOffset === 0) {
               clearInterval(this.state.intervalId);
           }
@@ -92,9 +94,9 @@ class App extends Component {
       
 
         scrollStepA() {
-          const isChrome = !!window.chrome && (!!window.chrome.webstore || !!window.chrome.runtime);
-         
-          console.log(navigator.userAgent.indexOf('IEMobile'))
+          
+       
+
           if(!!window.chrome) {
             if (window.pageYOffset === 0) {
               clearInterval(this.state.intervalId);
@@ -116,6 +118,7 @@ class App extends Component {
         }
       
         scrollStepW() {
+          this.setState({r:navigator.userAgent.match(/iPhone/i)})
           if (window.pageYOffset === 0) {
               clearInterval(this.state.intervalId);
           }
