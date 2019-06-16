@@ -34,11 +34,11 @@ class App extends Component {
           console.log(p)
           if(navigator.userAgent.match(/iPhone/i)!== null){
             this.setState({r:navigator.userAgent.match(/iPhone/i)[0]})
-          }
-         
-          if(!!window.chrome){
+          }else if(!!window.chrome){
             console.log("chrome")
             this.setState({r:"chrome"})
+          }else{
+            his.setState({r:"safari"})
           }
         
 
