@@ -33,23 +33,36 @@ class App extends Component {
          
           console.log(p)
           if(navigator.userAgent.match(/iPhone/i)!== null){
-            this.setState({r:navigator.userAgent.match(/iPhone/i)[0]})
-          }else if(!!window.chrome){
-            console.log("chrome")
-            this.setState({r:"chrome"})
-          }else if(/android/i.test(navigator.userAgent)){
-            this.setState({r:"android"})
-          }else{
-            this.setState({r:"safari"})
-          }
-        
+            if(navigator.userAgent.match(/iPhone/i)[0]==="iPhone"){
+  
+              if(p>=0 && p<80 ){
 
-          if(!!window.chrome){
-            if(p>=0 && p<100 ){
+                this.setState({top:'0',endTop:'-10%'})
+    
+              }else if(p>81 &&p<750){
+             
+                this.setState({top:'102%'})
+                if(p>300){
+                  this.setState({endTop:'96%'})
+                }
+    
+    
+              }else if(p>751 ) {
+    
+                this.setState({top:'202%'})
+              
+              if(p>801){
+                this.setState({endTop:'198%'})
+              }
+            }
+            }
+          }else if(!!window.chrome){
+           
+            if(p>=0 && p<80 ){
 
               this.setState({top:'0',endTop:'-10%'})
   
-            }else if(p>101 &&p<800){
+            }else if(p>81 &&p<1000){
            
               this.setState({top:'102%'})
               if(p>300){
@@ -57,7 +70,7 @@ class App extends Component {
               }
   
   
-            }else if(p>801 ) {
+            }else if(p>1001 ) {
   
               this.setState({top:'202%'})
             
@@ -66,13 +79,17 @@ class App extends Component {
             }
           }
 
+          }else if(/android/i.test(navigator.userAgent)){
+          
 
-          }else {
-            if(p>=0 && p<32){
+
+          }else{
+        
+            if(p>=0 && p<80){
 
               this.setState({top:'0',endTop:'-10%'})
   
-            }else if(p>33 &&p<415){
+            }else if(p>81 &&p<850){
            
               this.setState({top:'102%'})
               if(p>130){
@@ -80,7 +97,7 @@ class App extends Component {
               }
   
   
-            }else if(p>415 ) {
+            }else if(p>851 ) {
   
               this.setState({top:'202%'})
             
@@ -88,8 +105,11 @@ class App extends Component {
               this.setState({endTop:'198%'})
             }
           }
-        
+
           }
+        
+
+         
       
         };       
         
