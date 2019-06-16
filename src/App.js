@@ -33,7 +33,7 @@ class App extends Component {
           console.log( navigator.userAgent.match(/iPhone/i))
           console.log(p)
           
-         
+          
           if(!!window.chrome){
             if(p>=0 && p<100 ){
 
@@ -57,7 +57,12 @@ class App extends Component {
           }
 
 
-          }else{
+          }else if(navigator.userAgent.match(/iPhone/i)){
+
+            this.setState({r:"is a mobile"})
+
+
+          }else {
             if(p>=0 && p<32){
 
               this.setState({top:'0',endTop:'-10%'})
@@ -118,7 +123,8 @@ class App extends Component {
         }
       
         scrollStepW() {
-          this.setState({r:navigator.userAgent.match(/iPhone/i)})
+
+         
           if (window.pageYOffset === 0) {
               clearInterval(this.state.intervalId);
           }
