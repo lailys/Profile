@@ -36,15 +36,11 @@ class App extends Component {
             this.setState({r:navigator.userAgent.match(/iPhone/i)[0]})
           }
          
-          if(navigator.userAgent.match(/Chrome/i)!== null){
-            console.log(navigator.userAgent.match(/Chrome/i)[0])
-            this.setState({r:navigator.userAgent.match(/Chrome/i)[0]})
+          if(!!window.chrome){
+            console.log("chrome")
+            this.setState({r:"chrome"})
           }
-          if(navigator.userAgent.match(/Safari/i)!== null){
-            console.log(navigator.userAgent.match(/Safari/i)[0])
-            this.setState({r:navigator.userAgent.match(/Safari/i)[0]})
-          }
-
+        
 
           if(!!window.chrome){
             if(p>=0 && p<100 ){
