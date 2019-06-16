@@ -33,10 +33,7 @@ class Front extends Component {
                 <span className="about-note">I'm an entry level designer/developer based in Bayarea. I have a passion for desining Web/App and develop application.
                 <br/>
                 <br/>
-                <br/>
-                <br/>
-                <br/>
-                <br/>
+   
                 <span style={{fontSize:"120%",fontWeight:"bold", marginLeft:"40%"}}>skills:</span>
                 <br/>
                 

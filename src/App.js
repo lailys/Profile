@@ -31,9 +31,9 @@ class App extends Component {
         
           const isChrome = !!window.chrome && (!!window.chrome.webstore || !!window.chrome.runtime);
           const isSafari = /constructor/i.test(window.HTMLElement) || (function (p) { return p.toString() === "[object SafariRemoteNotification]"; })(!window['safari'] );
-          console.log(isChrome)
-          console.log(!!window.chrome)
-          if(navigator.userAgent.indexOf('IEMobile')){
+          console.log(window.orientation)
+          console.log(navigator.userAgent.indexOf('IEMobile')!==-1)
+          if(navigator.userAgent.indexOf('IEMobile')!==-1){
             if(p>=0 && p<32){
 
               this.setState({top:'0',endTop:'-10%'})
@@ -56,11 +56,11 @@ class App extends Component {
           }
 
           }else{
-            if(p>=0 && p<76 ){
+            if(p>=0 && p<100 ){
 
               this.setState({top:'0',endTop:'-10%'})
   
-            }else if(p>77 &&p<1056){
+            }else if(p>101 &&p<800){
            
               this.setState({top:'102%'})
               if(p>130){
@@ -68,7 +68,7 @@ class App extends Component {
               }
   
   
-            }else if(p>1057 ) {
+            }else if(p>801 ) {
   
               this.setState({top:'202%'})
             
