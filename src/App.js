@@ -44,17 +44,17 @@ if(!!window.chrome ){
 
           this.setState({top:'0',endTop:'-10%'})
 
-        }else if(p>91 &&p<750){
+        }else if(p>91 &&p<800){
        
-          this.setState({top:'111%'})
+          this.setState({top:'150%'})
           if(p>300){
             this.setState({endTop:'96%'})
           }
 
 
-        }else if(p>751 ) {
+        }else if(p>800 ) {
 
-          this.setState({top:'215%'})
+          this.setState({top:'250%'})
         
         if(p>801){
           this.setState({endTop:'198%'})
