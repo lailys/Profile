@@ -28,7 +28,6 @@ class App extends Component {
 
         handleScroll=(e)=> {
           const p=e.composedPath()[1].scrollY
-          console.log(navigator.userAgent.match(/iPad/i)[0])
           
          
          
@@ -87,7 +86,8 @@ if(!!window.chrome ){
      
     }
   }else if(navigator.userAgent.match(/iPad/i)!==null){
-    console.log(navigator.userAgent.match(/iPad/i))
+
+    this.setState({r:p})
     if(p>=0 && p<90 ){
 
       console.log(p)
@@ -218,7 +218,7 @@ if(!!window.chrome ){
         }
       
         scrollStepW() {
-        this.setState({r:navigator.userAgent.match(/iPad/i)[0]})
+        
           if (window.pageYOffset === 0) {
             clearInterval(this.state.intervalId);
         }
