@@ -87,7 +87,7 @@ if(!!window.chrome ){
     }
   }else if(navigator.userAgent.match(/iPad/i)!==null){
 
-    this.setState({r:p})
+ 
     if(p>=0 && p<90 ){
 
       console.log(p)
@@ -176,39 +176,43 @@ if(!!window.chrome ){
       
 
         scrollStepA() {
-          if(navigator.userAgent.match(/iPhone/i)!== null){
+          if (window.pageYOffset === 0) {
+            clearInterval(this.state.intervalId);
+            
+        }
+         else if(!!window.chrome){
+          if(navigator.userAgent.match(/iPad/i)!==null){
+            if(window.orientation===0){
+              window.scroll(0, 1033); 
+            }else{
+              window.scroll(0, 784);
+            }
+
+           
+
+          }else if(navigator.userAgent.match(/iPhone/i)!== null){
             if(navigator.userAgent.match(/iPhone/i)[0]==="iPhone"){
 
             if(window.orientation===0){
-                if (window.pageYOffset === 0) {
-                  clearInterval(this.state.intervalId);
-                  
-              }
+             
               window.scroll(0, 600);
               } else{
                 
-                if (window.pageYOffset === 0) {
-                  clearInterval(this.state.intervalId);
-                  
-              }
+             
               window.scroll(0, 376);
 
               }
 
            
 
-            }}else if(!!window.chrome){
-              if (window.pageYOffset === 0) {
-                clearInterval(this.state.intervalId);
-            }
+            }}else{
             window.scroll(0, 700);
+          }
+           
             }else if(/android/i.test(navigator.userAgent)){
             
             }else{
-              if (window.pageYOffset === 0) {
-                clearInterval(this.state.intervalId);
-                
-            }
+            
             window.scroll(0, 760)
             }
           
@@ -277,10 +281,13 @@ if(!!window.chrome ){
                 <div className="line">.</div>
                 <div className="line">.</div>
           </div>
+      
          <div>{this.state.p}</div>
+         
      <Front/>
-     
+
      <Footer style={{bottom:this.state.footer}}/>
+     
       </div>
     );
   }
