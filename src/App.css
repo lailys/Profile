@@ -394,6 +394,7 @@ align-items: center;
  
 .footer{
   background: white;
+  top: 320%;
 }
 .row1{
   justify-content: space-between; 
