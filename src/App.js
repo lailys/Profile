@@ -29,7 +29,7 @@ class App extends Component {
         handleScroll=(e)=> {
           const p=e.composedPath()[1].scrollY
           
-         
+         console.log(p)
          
       
 
@@ -51,7 +51,7 @@ if(!!window.chrome ){
           }
 
 
-        }else if(p>751 ) {
+        }else if(p>750 ) {
 
           this.setState({top:'215%'})
         
@@ -59,7 +59,29 @@ if(!!window.chrome ){
           this.setState({endTop:'198%'})
         }
       }
-      }else {
+      }else if(window.orientation===90){
+        if(p>=0 && p<90 ){
+
+          this.setState({top:'0',endTop:'-10%'})
+
+        }else if(p>91 &&p<750){
+       
+          this.setState({top:'111%'})
+          if(p>300){
+            this.setState({endTop:'96%'})
+          }
+
+
+        }else if(p>750 ) {
+
+          this.setState({top:'215%'})
+        
+        if(p>801){
+          this.setState({endTop:'198%'})
+        }
+      }
+      }
+      else {
   
         if(p>=0 && p<80){
 
@@ -73,7 +95,7 @@ if(!!window.chrome ){
           }
 
 
-        }else if(p>408 ) {
+        }else if(p>407 ) {
 
           this.setState({top:'206%'})
         
@@ -85,7 +107,28 @@ if(!!window.chrome ){
 
      
     }
-  }else{
+  }else if(navigator.userAgent.match(/iPad/i)!==null){
+    console.log(navigator.userAgent.match(/iPad/i))
+    if(p>=0 && p<90 ){
+
+      console.log(p)
+      this.setState({top:'0'})
+
+    }else if(p>81 &&p<1150){
+       
+      
+      console.log(p)
+      this.setState({top:'103%'})
+
+    }else if(p>1150){
+       
+      
+      console.log(p)
+      this.setState({top:'205%'})
+
+    }
+}else{
+  console.log(/iPad/i.test(navigator.userAgent))   
   if(p>=0 && p<80 ){
 
     this.setState({top:'0',endTop:'-10%'})
@@ -154,12 +197,14 @@ if(!!window.chrome ){
       
 
         scrollStepA() {
-          
           if(navigator.userAgent.match(/iPhone/i)!== null){
             if(navigator.userAgent.match(/iPhone/i)[0]==="iPhone"){
 
             if(window.orientation===0){
-             
+                if (window.pageYOffset === 0) {
+                  clearInterval(this.state.intervalId);
+                  
+              }
               window.scroll(0, 600);
               } else{
                 
@@ -194,7 +239,6 @@ if(!!window.chrome ){
         }
       
         scrollStepW() {
-        
           if (window.pageYOffset === 0) {
             clearInterval(this.state.intervalId);
         }
@@ -253,13 +297,10 @@ if(!!window.chrome ){
                 <div className="line">.</div>
                 <div className="line">.</div>
           </div>
-      
          <div>{this.state.p}</div>
-         
      <Front/>
-
-     <Footer style={{bottom:this.state.footer}}/>
      
+     <Footer style={{bottom:this.state.footer}}/>
       </div>
     );
   }
