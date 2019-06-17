@@ -41,21 +41,21 @@ if(!!window.chrome ){
       if(window.orientation===0){
 
 
-        if(p>=0 && p<76 ){
+        if(p>=0 && p<70 ){
 
           this.setState({top:'0',endTop:'-10%'})
 
-        }else if(p>76 &&p<722){
+        }else if(p>71 &&p<733){
        
-          this.setState({top:'111%'})
+          this.setState({top:'180%'})
           if(p>300){
             this.setState({endTop:'96%'})
           }
 
 
-        }else if(p>722 ) {
+        }else if(p>734 ) {
 
-          this.setState({top:'200%'})
+          this.setState({top:'280%'})
         
         if(p>801){
           this.setState({endTop:'198%'})
@@ -126,28 +126,7 @@ if(!!window.chrome ){
 
      
     }
-  }else if(navigator.userAgent.match(/iPad/i)!==null){
-    console.log(navigator.userAgent.match(/iPad/i))
-    if(p>=0 && p<90 ){
-
-      console.log(p)
-      this.setState({top:'0'})
-
-    }else if(p>81 &&p<1150){
-       
-      
-      console.log(p)
-      this.setState({top:'103%'})
-
-    }else if(p>1150){
-       
-      
-      console.log(p)
-      this.setState({top:'205%'})
-
-    }
-}else{
-  console.log(/iPad/i.test(navigator.userAgent))   
+  }else{
   if(p>=0 && p<80 ){
 
     this.setState({top:'0',endTop:'-10%'})
