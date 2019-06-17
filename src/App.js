@@ -258,7 +258,6 @@ class App extends Component {
        
           <div className="header" style={{top:this.state.top}}>
                 <a className="logo" onClick={(e) =>this.setId(e)}>LailyS</a>
-                <div>{this.state.r}</div>
                 <a className="about" onClick={(e) =>this.setId(e)}> About</a>
                 <a className="work"  onClick={(e)=>this.setId(e)}> Work</a>
           </div>
