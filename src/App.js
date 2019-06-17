@@ -105,26 +105,26 @@ class App extends Component {
                 }
               }
               }else if(window.orientation===90){
- if(p>=0 && p<90 ){
+                if(p>=0 && p<80){
 
-                this.setState({top:'0',endTop:'-10%'})
-    
-              }else if(p>91 &&p<750){
-             
-                this.setState({top:'102%'})
-                if(p>300){
-                  this.setState({endTop:'96%'})
+                  this.setState({top:'0',endTop:'-10%'})
+      
+                }else if(p>81 &&p<850){
+               
+                  this.setState({top:'102%'})
+                  if(p>130){
+                    this.setState({endTop:'96%'})
+                  }
+      
+      
+                }else if(p>851 ) {
+      
+                  this.setState({top:'202%'})
+                
+                if(p>1010){
+                  this.setState({endTop:'198%'})
                 }
-    
-    
-              }else if(p>751 ) {
-    
-                this.setState({top:'202%'})
-              
-              if(p>801){
-                this.setState({endTop:'198%'})
               }
-            }
               }
   
              
