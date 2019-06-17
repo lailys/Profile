@@ -239,6 +239,21 @@ class App extends Component {
         }
       
         scrollStepW() {
+          if(navigator.userAgent.match(/iPhone/i)!== null){
+            if(navigator.userAgent.match(/iPhone/i)[0]==="iPhone"){
+
+              if(window.orientation===0){
+                if (window.pageYOffset === 0) {
+                  clearInterval(this.state.intervalId);
+              }
+              window.scroll(0, 2800);
+
+              }}}else{
+                if (window.pageYOffset === 0) {
+                  clearInterval(this.state.intervalId);
+              }
+              window.scroll(0, 2835);
+              }
           
          
           if (window.pageYOffset === 0) {
