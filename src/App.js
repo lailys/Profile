@@ -104,7 +104,7 @@ class App extends Component {
                   this.setState({endTop:'198%'})
                 }
               }
-              }else if(window.orientation===90){
+              }else {
           
                 if(p>=0 && p<80){
 
