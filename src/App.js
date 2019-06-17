@@ -97,7 +97,7 @@ class App extends Component {
       
                 }else if(p>751 ) {
       
-                  this.setState({top:'240%'})
+                  this.setState({top:'215%'})
                 
                 if(p>801){
                   this.setState({endTop:'198%'})
