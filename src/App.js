@@ -36,80 +36,106 @@ class App extends Component {
 
 
 
- if(navigator.userAgent.match(/iPhone/i)!== null){
-            if(navigator.userAgent.match(/iPhone/i)[0]==="iPhone"){
-              if(window.orientation===0){
-                if(p>=0 && p<90 ){
+if(!!window.chrome ){
+  if(navigator.userAgent.match(/iPhone/i)!== null){
+    if(navigator.userAgent.match(/iPhone/i)[0]==="iPhone"){
+      if(window.orientation===0){
+        if(p>=0 && p<90 ){
 
-                  this.setState({top:'0',endTop:'-10%'})
-      
-                }else if(p>91 &&p<750){
-               
-                  this.setState({top:'111%'})
-                  if(p>300){
-                    this.setState({endTop:'96%'})
-                  }
-      
-      
-                }else if(p>751 ) {
-      
-                  this.setState({top:'215%'})
-                
-                if(p>801){
-                  this.setState({endTop:'198%'})
-                }
-              }
-              }else {
-          
-                if(p>=0 && p<80){
+          this.setState({top:'0',endTop:'-10%'})
 
-                  this.setState({top:'0',endTop:'-10%'})
-      
-                }else if(p>81 &&p<407){
-               
-                  this.setState({top:'102%'})
-                  if(p>130){
-                    this.setState({endTop:'96%'})
-                  }
-      
-      
-                }else if(p>408 ) {
-      
-                  this.setState({top:'206%'})
-                
-                if(p>1010){
-                  this.setState({endTop:'198%'})
-                }
-              }
-              }
+        }else if(p>91 &&p<750){
+       
+          this.setState({top:'111%'})
+          if(p>300){
+            this.setState({endTop:'96%'})
+          }
+
+
+        }else if(p>751 ) {
+
+          this.setState({top:'215%'})
+        
+        if(p>801){
+          this.setState({endTop:'198%'})
+        }
+      }
+      }else {
   
+        if(p>=0 && p<80){
+
+          this.setState({top:'0',endTop:'-10%'})
+
+        }else if(p>81 &&p<407){
+       
+          this.setState({top:'102%'})
+          if(p>130){
+            this.setState({endTop:'96%'})
+          }
+
+
+        }else if(p>408 ) {
+
+          this.setState({top:'206%'})
+        
+        if(p>1010){
+          this.setState({endTop:'198%'})
+        }
+      }
+      }
+
+     
+    }
+  }else if(/iPad/i.test(navigator.userAgent)){
+
+
+            }else{
+
+              if(p>=0 && p<80 ){
+
+                this.setState({top:'0',endTop:'-10%'})
+    
+              }else if(p>81 &&p<1000){
              
+                this.setState({top:'102%'})
+                if(p>300){
+                  this.setState({endTop:'96%'})
+                }
+    
+    
+              }else if(p>1001 ) {
+    
+                this.setState({top:'202%'})
+              
+              if(p>801){
+                this.setState({endTop:'198%'})
+              }
             }
-          }else if(!!window.chrome || /iPad/i.test(navigator.userAgent)){
+            }
            
-            if(p>=0 && p<80 ){
+      
+
+          }else if(/android/i.test(navigator.userAgent)){
+            if(p>=0 && p<80){
 
               this.setState({top:'0',endTop:'-10%'})
   
-            }else if(p>81 &&p<1000){
+            }else if(p>81 &&p<850){
            
               this.setState({top:'102%'})
-              if(p>300){
+              if(p>130){
                 this.setState({endTop:'96%'})
               }
   
   
-            }else if(p>1001 ) {
+            }else if(p>851 ) {
   
               this.setState({top:'202%'})
             
-            if(p>801){
+            if(p>1010){
               this.setState({endTop:'198%'})
             }
           }
-
-          }else if(/android/i.test(navigator.userAgent)){
-          
 
 
           }else{
@@ -202,7 +228,7 @@ class App extends Component {
                 if (window.pageYOffset === 0) {
                   clearInterval(this.state.intervalId);
               }
-              window.scroll(0, 2750);
+              window.scroll(0, 2730);
 
               }}}else{
                 if (window.pageYOffset === 0) {
@@ -212,10 +238,7 @@ class App extends Component {
               }
           
          
-          if (window.pageYOffset === 0) {
-              clearInterval(this.state.intervalId);
-          }
-          window.scroll(0, 2835);
+
         }
        
 
