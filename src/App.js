@@ -105,11 +105,12 @@ class App extends Component {
                 }
               }
               }else if(window.orientation===90){
+          
                 if(p>=0 && p<80){
 
                   this.setState({top:'0',endTop:'-10%'})
       
-                }else if(p>81 &&p<850){
+                }else if(p>81 &&p<416){
                
                   this.setState({top:'102%'})
                   if(p>130){
@@ -117,7 +118,7 @@ class App extends Component {
                   }
       
       
-                }else if(p>851 ) {
+                }else if(p>417 ) {
       
                   this.setState({top:'202%'})
                 
@@ -200,13 +201,22 @@ class App extends Component {
           if(navigator.userAgent.match(/iPhone/i)!== null){
             if(navigator.userAgent.match(/iPhone/i)[0]==="iPhone"){
 
+              if(window.orientation===90){
+                if (window.pageYOffset === 0) {
+                  clearInterval(this.state.intervalId);
+                  
+              }
+              window.scroll(0, 375);
 
+              }else if(window.orientation===0){
+                if (window.pageYOffset === 0) {
+                  clearInterval(this.state.intervalId);
+                  
+              }
+              window.scroll(0, 600);
+              }
 
-              if (window.pageYOffset === 0) {
-                clearInterval(this.state.intervalId);
-                
-            }
-            window.scroll(0, 600);
+           
 
             }}else if(!!window.chrome){
               if (window.pageYOffset === 0) {
@@ -258,6 +268,7 @@ class App extends Component {
        
           <div className="header" style={{top:this.state.top}}>
                 <a className="logo" onClick={(e) =>this.setId(e)}>LailyS</a>
+                <div>{this.state.r}</div>
                 <a className="about" onClick={(e) =>this.setId(e)}> About</a>
                 <a className="work"  onClick={(e)=>this.setId(e)}> Work</a>
           </div>
