@@ -203,7 +203,7 @@ class App extends Component {
 
               if(window.orientation===0){
               
-                window.scroll(0, 1000);
+                window.scroll(0, 1500);
              
            
 
