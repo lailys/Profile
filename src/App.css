@@ -386,7 +386,11 @@ align-items: center;
  
   
 .front>.b {
-  margin-top: 10vh;}
+  margin-top: 13.5vh;
+}
+.front>.c {
+  margin-top: 11vh;
+}
  
 .footer{
   background: white;
