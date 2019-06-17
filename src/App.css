@@ -65,6 +65,7 @@ z-index: 2;
 }
 
 .front {
+  background: yellow;
   position: absolute;
   top: 17.5%;
   color: white;
@@ -310,9 +311,54 @@ a:active {
     }
 
 }
+@media only screen and (min-width: 450) and (max-width: 750px) {
+  
+  .header{
+    height: 18.5%;
+   
+  }
+  .logo{
+    width:62%;
+  }
+
+  .about{
+    padding:0 2% 0 2%;
+    font-size: 2.8vw;
+  }
+
+  .about-note{
+    font-size:3vw;
+    width:80%;
+    height: 70%;
+  }
+  .work{
+  padding-left:2%;
+    border-left:.2px solid #E8BF48;
+    font-size: 2.8vw;
+  }
+ 
+  
+ 
+.footer{
+  background: white;
+}
+.row1{
+  justify-content: space-between; 
+  width: 90vw;
+}
+.github,.linkedin,.email,.codepen{
+  margin-left: 0;
+  display: flex;
+align-items: center;
+justify-content: center;
+align-items: center;
+}
 
 
-@media only screen and (min-width: 375px) and (max-width: 750px) {
+
+}
+
+@media only screen and (min-width: 320px) and (max-width: 451px) {
   
   .header{
     height: 18.5%;
