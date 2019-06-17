@@ -38,73 +38,73 @@ class App extends Component {
 
 
 
-
-
-
-if(/iPhone/i.test(navigator.userAgent)){
-
-
+if(navigator.userAgent.match(/iPhone/i)!== null){
+  if(navigator.userAgent.match(/iPhone/i)[0]==="iPhone"){
 
 
 
 
-
-  if(window.orientation===0){
-
-
-
-
-    if(p>=0 && p<62 ){
+    if(window.orientation===0){
 
 
 
 
-      this.setState({top:'0',endTop:'-10%'})
-      if(p>17){
-        this.setState({endTop:'96%'})
-      }
+
+      if(p>=0 && p<62 ){
 
 
 
 
-    }
-
-
-
-    else if(p>=62 && p<738 ){
-
-
-
-
-      this.setState({top:'111%'})
-    
-      if(p>652){
-        this.setState({endTop:'198%'})
-      }
-
-
-
-    }else if(p>738){
-
-
-
-      this.setState({top:'215%'})
+        this.setState({top:'0',endTop:'-10%'})
+        if(p>17){
+          this.setState({endTop:'96%'})
+        }
   
-      if(p>1010){
-        this.setState({endTop:'198%'})
-      }}
-
-
-
-
-
-
-
+  
+  
+  
+      }
+  
+  
+  
+      else if(p>=62 && p<738 ){
+        
+  
+        this.setState({top:'111%'})
+      
+        if(p>652){
+          this.setState({endTop:'198%'})
+        }else{
+          this.setState({endTop:'96%'})
+        }
     
+  
+  
+  
+      }else if(p>738){
+  
+  
+  
+        this.setState({top:'215%'})
     
-    
+        if(p>1010){
+          this.setState({endTop:'198%'})
+        }}
+  
+
+
+
+
+
+
 
     }
+
+
+
+
+
+
 
 
 
@@ -116,31 +116,26 @@ if(/iPhone/i.test(navigator.userAgent)){
 
   }
 
+}
+
+else{
 
 
 
 
 
 
-}else{
+
+
+
   if(p>=0 && p<80){
-
-
-
 
     this.setState({top:'0',endTop:'-10%'})
     if(p>44){
       this.setState({endTop:'96%'})
     }
 
-
-
-
-  }else if(p>80 &&p<740){
-
-
-
-
+  }else if(p>81 &&p<740){
  
     this.setState({top:'102%'})
     
@@ -151,12 +146,7 @@ if(/iPhone/i.test(navigator.userAgent)){
     }
 
 
-
-
-
   }else if(p>740 ) {
-
-
 
     this.setState({top:'206%'})
   
@@ -168,10 +158,20 @@ if(/iPhone/i.test(navigator.userAgent)){
 
 
 
+
+
+
+
+
+
+
+
 }
 
 
-        
+
+
+         
 
 
 
@@ -215,7 +215,18 @@ if(/iPhone/i.test(navigator.userAgent)){
 
 
       
-        };       
+        };   
+        
+        
+
+
+
+
+
+
+
+
+
         
         scrollStepT() {
           
@@ -294,7 +305,7 @@ if(/iPhone/i.test(navigator.userAgent)){
                 if (window.pageYOffset === 0) {
                   clearInterval(this.state.intervalId);
               }
-              window.scroll(0,765);
+              window.scroll(0,76);
              
 
               }}}else{
