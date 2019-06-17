@@ -35,6 +35,14 @@ class App extends Component {
          console.log(!!window.chrome)
          
          if(!!window.chrome ){
+
+
+
+
+
+
+
+
           if(p>=0 && p<80){
 
             this.setState({top:'0',endTop:'-10%'})
@@ -59,15 +67,21 @@ class App extends Component {
           
           if(p>1010){
             this.setState({endTop:'198%'})
-          }
-  
-  
-  
-  
-        }
+          }}
   
 
+
+
+
+
+
+
          }else{
+
+
+
+
+
           if(p>=0 && p<80 ){
 
             this.setState({top:'0',endTop:'-10%'})
@@ -88,6 +102,12 @@ class App extends Component {
             this.setState({endTop:'198%'})
           }
         }
+
+
+
+
+
+
          }
 
 
@@ -158,18 +178,26 @@ class App extends Component {
             if(navigator.userAgent.match(/iPhone/i)[0]==="iPhone"){
 
               if(window.orientation===0){
+                if (window.pageYOffset === 0) {
+                  clearInterval(this.state.intervalId);
+              }
               
                 window.scroll(0, 1200);
              
            
 
-              }else if(window.orientation===90){
+              }else{
                 
-               
+                if (window.pageYOffset === 0) {
+                  clearInterval(this.state.intervalId);
+              }
               window.scroll(0,0);
              
 
               }}}else{
+                if (window.pageYOffset === 0) {
+                  clearInterval(this.state.intervalId);
+              }
             
               window.scroll(0, 2835);
               }
