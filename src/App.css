@@ -65,6 +65,7 @@ z-index: 2;
 }
 
 .front {
+  
   position: absolute;
   top: 17.5%;
   color: white;
@@ -291,26 +292,12 @@ a:active {
 
 
 
-@media only screen and (min-width: 751px) and (max-width: 999px) {
 
-  .logo{
-    width:62%;
-  }
+@media only screen and (min-width: 768) and (max-width: 1024px) {
 
-
-  .work{
-    padding-left:2%;
-      border-left:.2px solid #E8BF48;
-      font-size: 2.4vw;
-    }
-  
-    .about{
-      padding:0 2% 0 2%;
-      font-size: 2.4vw;
-    }
 
 }
-@media only screen and (min-width: 450) and (max-width: 750px) {
+@media only screen and (min-width: 450) and (max-width: 767px) {
   
   .header{
     height: 18.5%;
