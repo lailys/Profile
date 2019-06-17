@@ -199,12 +199,14 @@ class App extends Component {
             if(navigator.userAgent.match(/iPhone/i)[0]==="iPhone"){
 
               if(window.orientation===0){
+                this.setState({r:window.orientation})
                 if (window.pageYOffset === 0) {
                   clearInterval(this.state.intervalId);
               }
               window.scroll(0, 2650);
 
               }else if(window.orientation===90){
+                this.setState({r:window.orientation})
                 if (window.pageYOffset === 0) {
                   clearInterval(this.state.intervalId);
               }
