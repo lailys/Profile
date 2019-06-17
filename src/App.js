@@ -204,6 +204,12 @@ class App extends Component {
               }
               window.scroll(0, 2700);
 
+              }else{
+                if (window.pageYOffset === 0) {
+                  clearInterval(this.state.intervalId);
+              }
+              window.scroll(0, 2750);
+
               }}}else{
                 if (window.pageYOffset === 0) {
                   clearInterval(this.state.intervalId);
@@ -212,10 +218,7 @@ class App extends Component {
               }
           
          
-          if (window.pageYOffset === 0) {
-              clearInterval(this.state.intervalId);
-          }
-          window.scroll(0, 2835);
+   
         }
        
 
