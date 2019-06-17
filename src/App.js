@@ -211,7 +211,9 @@ if(!!window.chrome ){
           if(!!window.chrome) {if (window.pageYOffset === 0) {
               clearInterval(this.state.intervalId);
           }
-          window.scroll(0, window.pageYOffset - this.props.scrollStepInPx);}
+          window.scroll(0, window.pageYOffset - this.props.scrollStepInPx);}else{
+            window.scroll(0, 0)
+          }
         }
       
 
