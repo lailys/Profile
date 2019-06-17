@@ -41,34 +41,166 @@ class App extends Component {
 
 
 
+if(/iPhone/i.test(navigator.userAgent)){
 
 
-          if(p>=0 && p<80){
 
-            this.setState({top:'0',endTop:'-10%'})
-            if(p>44){
-              this.setState({endTop:'96%'})
-            }
+
+
+
+
+  if(window.orientation===0){
+
+
+
+    if(p>=0 && p<62 ){
+
+
+
+
+      this.setState({top:'0',endTop:'-10%'})
+      if(p>17){
+        this.setState({endTop:'96%'})
+      }
+
+
+
+
+    }
+
+
+
+    else if(p>=62 && p<738 ){
+
+
+
+
+      this.setState({top:'111%'})
+    
+      if(p>652){
+        this.setState({endTop:'198%'})
+      }else{
+        this.setState({endTop:'96%'})
+      }
   
-          }else if(p>81 &&p<740){
-         
-            this.setState({top:'102%'})
-            
-            if(p>702){
-              this.setState({endTop:'198%'})
-            }else{
-              this.setState({endTop:'96%'})
-            }
+
+
+
+    }else if(p>738){
+
+
+
+      this.setState({top:'215%'})
   
+      if(p>1010){
+        this.setState({endTop:'198%'})
+      }}
+    
+    
+
+    }
+
+
+
+
+
+
+
+
+
+  }
+
+
+
+
+
+
+  else{
+
+
+
+
+
+
+
+  }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+}
+
+
+
+
+
+
+
+else{
+  if(p>=0 && p<80){
+
+
+
+
+    this.setState({top:'0',endTop:'-10%'})
+    if(p>44){
+      this.setState({endTop:'96%'})
+    }
+
+
+
+
+  }else if(p>80 &&p<740){
+
+
+
+
+ 
+    this.setState({top:'102%'})
+    
+    if(p>702){
+      this.setState({endTop:'198%'})
+    }else{
+      this.setState({endTop:'96%'})
+    }
+
+
+
+
+
+  }else if(p>740 ) {
+
+
+
+    this.setState({top:'206%'})
   
-          }else if(p>740 ) {
-  
-            this.setState({top:'206%'})
-          
-          if(p>1010){
-            this.setState({endTop:'198%'})
-          }}
-  
+  if(p>1010){
+    this.setState({endTop:'198%'})
+  }}
+
+
+
+
+
+}
+
+
+        
 
 
 
