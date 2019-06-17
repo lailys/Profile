@@ -68,9 +68,9 @@ if(navigator.userAgent.match(/iPhone/i)!== null){
   
   
       else if(p>=62 && p<738 ){
-        
+
   
-        this.setState({top:'111%'})
+        this.setState({top:'160%'})
       
         if(p>652){
           this.setState({endTop:'198%'})
@@ -85,7 +85,7 @@ if(navigator.userAgent.match(/iPhone/i)!== null){
   
   
   
-        this.setState({top:'215%'})
+        this.setState({top:'300%'})
     
         if(p>1010){
           this.setState({endTop:'198%'})
