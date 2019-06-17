@@ -30,33 +30,37 @@ class App extends Component {
           const p=e.composedPath()[1].scrollY
           console.log(navigator.userAgent)
           console.log(!!window.chrome)
-          console.log(navigator.userAgent)
+          console.log(window.orientation)
          
           console.log(p)
 
           if(navigator.userAgent.match(/iPad/i)!== null){
             if(navigator.userAgent.match(/iPad/i)[0]==="iPad"){
-             
-              if(p>=0 && p<146){
+              if(window.orientation===0){
+                if(p>=0 && p<146){
 
-                this.setState({top:'0',endTop:'-10%'})
-    
-              }else if(p>147 &&p<1516){
-             
-                this.setState({top:'102%'})
-                if(p>1517){
-                  this.setState({endTop:'96%'})
+                  this.setState({top:'0',endTop:'-10%'})
+      
+                }else if(p>147 &&p<1516){
+               
+                  this.setState({top:'108%'})
+                  if(p>1517){
+                    this.setState({endTop:'96%'})
+                  }
+      
+      
+                }else if(p>751 ) {
+      
+                  this.setState({top:'210%'})
+                
+                if(p>801){
+                  this.setState({endTop:'198%'})
                 }
-    
-    
-              }else if(p>751 ) {
-    
-                this.setState({top:'202%'})
-              
-              if(p>801){
-                this.setState({endTop:'198%'})
               }
-            }
+              }else if(window.orientation===90){
+
+              }
+           
             }}else if(navigator.userAgent.match(/iPhone/i)!== null){
             if(navigator.userAgent.match(/iPhone/i)[0]==="iPhone"){
   
