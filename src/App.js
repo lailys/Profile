@@ -32,58 +32,7 @@ class App extends Component {
           console.log(!!window.chrome)
          
          
-          console.log(p)
-          if(/iPad/i.test(navigator.userAgent)){
-              if(window.orientation===0){
-                if(p>=0 && p<90 ){
-
-                  this.setState({top:'0',endTop:'-10%'})
       
-                }else if(p>91 &&p<750){
-               
-                  this.setState({top:'111%'})
-                  if(p>300){
-                    this.setState({endTop:'96%'})
-                  }
-      
-      
-                }else if(p>751 ) {
-      
-                  this.setState({top:'215%'})
-                
-                if(p>801){
-                  this.setState({endTop:'198%'})
-                }
-              }
-              }else {
-          
-                if(p>=0 && p<80){
-
-                  this.setState({top:'0',endTop:'-10%'})
-      
-                }else if(p>81 &&p<407){
-               
-                  this.setState({top:'102%'})
-                  if(p>130){
-                    this.setState({endTop:'96%'})
-                  }
-      
-      
-                }else if(p>408 ) {
-      
-                  this.setState({top:'206%'})
-                
-                if(p>1010){
-                  this.setState({endTop:'198%'})
-                }
-              }
-              }
-  
-             
-            
-          }
-
-
 
  if(navigator.userAgent.match(/iPhone/i)!== null){
             if(navigator.userAgent.match(/iPhone/i)[0]==="iPhone"){
