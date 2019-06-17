@@ -158,7 +158,7 @@ class App extends Component {
                 clearInterval(this.state.intervalId);
                 
             }
-            window.scroll(0, 678);
+            window.scroll(0, 600);
 
             }}else if(!!window.chrome){
               if (window.pageYOffset === 0) {
