@@ -41,13 +41,13 @@ if(!!window.chrome ){
       if(window.orientation===0){
 
 
-        if(p>=0 && p<90 ){
+        if(p>=0 && p<76 ){
 
           this.setState({top:'0',endTop:'-10%'})
 
-        }else if(p>91 &&p<722){
+        }else if(p>76 &&p<722){
        
-          this.setState({top:'205%'})
+          this.setState({top:'111%'})
           if(p>300){
             this.setState({endTop:'96%'})
           }
@@ -55,7 +55,7 @@ if(!!window.chrome ){
 
         }else if(p>722 ) {
 
-          this.setState({top:'305%'})
+          this.setState({top:'200%'})
         
         if(p>801){
           this.setState({endTop:'198%'})
