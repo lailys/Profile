@@ -110,7 +110,7 @@ class App extends Component {
 
                   this.setState({top:'0',endTop:'-10%'})
       
-                }else if(p>81 &&p<416){
+                }else if(p>81 &&p<407){
                
                   this.setState({top:'102%'})
                   if(p>130){
@@ -118,7 +118,7 @@ class App extends Component {
                   }
       
       
-                }else if(p>417 ) {
+                }else if(p>408 ) {
       
                   this.setState({top:'202%'})
                 
@@ -206,7 +206,7 @@ class App extends Component {
                   clearInterval(this.state.intervalId);
                   
               }
-              window.scroll(0, 375);
+              window.scroll(0, 600);
 
               }else if(window.orientation===0){
                 if (window.pageYOffset === 0) {
