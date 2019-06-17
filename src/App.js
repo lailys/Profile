@@ -43,7 +43,7 @@ class App extends Component {
       
                 }else if(p>147 &&p<1516){
                
-                  this.setState({top:'110%'})
+                  this.setState({top:'111%'})
                   if(p>1517){
                     this.setState({endTop:'96%'})
                   }
@@ -51,7 +51,7 @@ class App extends Component {
       
                 }else if(p>751 ) {
       
-                  this.setState({top:'230%'})
+                  this.setState({top:'260%'})
                 
                 if(p>801){
                   this.setState({endTop:'198%'})
@@ -82,27 +82,51 @@ class App extends Component {
            
             }}else if(navigator.userAgent.match(/iPhone/i)!== null){
             if(navigator.userAgent.match(/iPhone/i)[0]==="iPhone"){
-  
-              if(p>=0 && p<90 ){
+              if(window.orientation===0){
+                if(p>=0 && p<90 ){
 
-                this.setState({top:'0',endTop:'-10%'})
-    
-              }else if(p>91 &&p<750){
-             
-                this.setState({top:'102%'})
-                if(p>300){
-                  this.setState({endTop:'96%'})
+                  this.setState({top:'0',endTop:'-10%'})
+      
+                }else if(p>91 &&p<750){
+               
+                  this.setState({top:'102%'})
+                  if(p>300){
+                    this.setState({endTop:'96%'})
+                  }
+      
+      
+                }else if(p>751 ) {
+      
+                  this.setState({top:'202%'})
+                
+                if(p>801){
+                  this.setState({endTop:'198%'})
                 }
-    
-    
-              }else if(p>751 ) {
-    
-                this.setState({top:'202%'})
-              
-              if(p>801){
-                this.setState({endTop:'198%'})
               }
-            }
+              }else if(window.orientation===90){
+                if(p>=0 && p<90 ){
+
+                  this.setState({top:'0',endTop:'-10%'})
+      
+                }else if(p>91 &&p<750){
+               
+                  this.setState({top:'102%'})
+                  if(p>300){
+                    this.setState({endTop:'96%'})
+                  }
+      
+      
+                }else if(p>751 ) {
+      
+                  this.setState({top:'202%'})
+                
+                if(p>801){
+                  this.setState({endTop:'198%'})
+                }
+              }
+              }
+  
+             
             }
           }else if(!!window.chrome){
            
