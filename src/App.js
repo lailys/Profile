@@ -195,27 +195,26 @@ class App extends Component {
         }
       
         scrollStepW() {
+          if (window.pageYOffset === 0) {
+            clearInterval(this.state.intervalId);
+        }
           if(navigator.userAgent.match(/iPhone/i)!== null){
             if(navigator.userAgent.match(/iPhone/i)[0]==="iPhone"){
 
               if(window.orientation===0){
-                this.setState({r:window.orientation})
-                if (window.pageYOffset === 0) {
-                  clearInterval(this.state.intervalId);
-              }
-              window.scroll(0, 2650);
+              
+             
+              window.scroll(0, 2400);
+              this.setState({r:window.orientation})
 
               }else if(window.orientation===90){
-                this.setState({r:window.orientation})
-                if (window.pageYOffset === 0) {
-                  clearInterval(this.state.intervalId);
-              }
+                
+               
               window.scroll(0, 2700);
+              this.setState({r:window.orientation})
 
               }}}else{
-                if (window.pageYOffset === 0) {
-                  clearInterval(this.state.intervalId);
-              }
+            
               window.scroll(0, 2835);
               }
           
