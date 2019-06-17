@@ -292,18 +292,18 @@ a:active {
 
 
 
+@media only screen and (min-width: 767px) and (max-width: 1024px){
 
-@media only screen and (min-width: 768) and (max-width: 1024px) {
   .front {
-  margin-left: 5vw;
     display: flex;
     align-items: center;
-  }
 
+  }
 }
-@media only screen and (min-width: 450) and (max-width: 767px) {
+@media only screen and (min-width: 450px) and (max-width: 766px){
   
   .header{
+    background: #E8BF48;
     height: 18.5%;
    
   }
