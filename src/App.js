@@ -115,15 +115,6 @@ if(/iPhone/i.test(navigator.userAgent)){
 
 
 
-  else{
-
-
-
-
-
-
-
-  }
 
 
 
