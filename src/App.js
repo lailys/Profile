@@ -204,7 +204,7 @@ class App extends Component {
               if(window.orientation===0){
               
              
-              window.scroll(0, 2400);
+             
               this.setState({r:window.orientation})
 
               }else if(window.orientation===90){
