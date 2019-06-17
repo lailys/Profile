@@ -53,6 +53,7 @@ if(/iPhone/i.test(navigator.userAgent)){
 
 
 
+
     if(p>=0 && p<62 ){
 
 
@@ -79,10 +80,7 @@ if(/iPhone/i.test(navigator.userAgent)){
     
       if(p>652){
         this.setState({endTop:'198%'})
-      }else{
-        this.setState({endTop:'96%'})
       }
-  
 
 
 
@@ -95,6 +93,14 @@ if(/iPhone/i.test(navigator.userAgent)){
       if(p>1010){
         this.setState({endTop:'198%'})
       }}
+
+
+
+
+
+
+
+    
     
     
 
@@ -116,33 +122,7 @@ if(/iPhone/i.test(navigator.userAgent)){
 
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-}
-
-
-
-
-
-
-
-else{
+}else{
   if(p>=0 && p<80){
 
 
