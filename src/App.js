@@ -89,13 +89,16 @@ class App extends Component {
         if (p >= 0 && p < 90) {
 
           console.log(p)
-          this.setState({ top: '0' })
+          this.setState({ top: '0', endTop: '-10%'  })
 
         } else if (p > 81 && p < 1150) {
 
 
           console.log(p)
           this.setState({ top: '103%' })
+          if (p > 367) {
+            this.setState({ endTop: '96%' })
+          }
 
         } else if (p > 1150) {
 
@@ -103,9 +106,12 @@ class App extends Component {
           console.log(p)
           this.setState({ top: '205%' })
 
+          if (p > 2800) {
+            this.setState({ endTop: '198%' })
+          }
+
         }
       } else {
-        console.log(/iPad/i.test(navigator.userAgent))
         if (p >= 0 && p < 80) {
 
           this.setState({ top: '0', endTop: '-10%' })
@@ -180,7 +186,7 @@ class App extends Component {
       clearInterval(this.state.intervalId);
 
     }
-    else if (!!window.chrome) {
+if (!!window.chrome) {
       if (navigator.userAgent.match(/iPad/i) !== null) {
         if (window.orientation === 0) {
           this.setState({r:window.orientation})
