@@ -85,29 +85,7 @@ if(!!window.chrome ){
 
      
     }
-  }else if(navigator.userAgent.match(/iPad/i)!==null){
-
- 
-    if(p>=0 && p<90 ){
-
-      console.log(p)
-      this.setState({top:'0'})
-
-    }else if(p>81 &&p<1150){
-       
-      
-      console.log(p)
-      this.setState({top:'103%'})
-
-    }else if(p>1150){
-       
-      
-      console.log(p)
-      this.setState({top:'205%'})
-
-    }
-}else{
-  console.log(/iPad/i.test(navigator.userAgent))   
+  }else{
   if(p>=0 && p<80 ){
 
     this.setState({top:'0',endTop:'-10%'})
@@ -176,10 +154,7 @@ if(!!window.chrome ){
       
 
         scrollStepA() {
-          if (window.pageYOffset === 0) {
-            clearInterval(this.state.intervalId);
-            
-        }
+          
           if(navigator.userAgent.match(/iPhone/i)!== null){
             if(navigator.userAgent.match(/iPhone/i)[0]==="iPhone"){
 
@@ -188,7 +163,10 @@ if(!!window.chrome ){
               window.scroll(0, 600);
               } else{
                 
-             
+                if (window.pageYOffset === 0) {
+                  clearInterval(this.state.intervalId);
+                  
+              }
               window.scroll(0, 376);
 
               }
@@ -196,12 +174,17 @@ if(!!window.chrome ){
            
 
             }}else if(!!window.chrome){
-          
+              if (window.pageYOffset === 0) {
+                clearInterval(this.state.intervalId);
+            }
             window.scroll(0, 700);
             }else if(/android/i.test(navigator.userAgent)){
             
             }else{
-            
+              if (window.pageYOffset === 0) {
+                clearInterval(this.state.intervalId);
+                
+            }
             window.scroll(0, 760)
             }
           
