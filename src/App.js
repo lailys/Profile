@@ -13,7 +13,8 @@ class App extends Component {
   state={
     top:'0',
     endTop:'-10%',
-    r:""
+    r:"",
+    footer:0,
 
         }
       
@@ -222,7 +223,7 @@ class App extends Component {
          <div>{this.state.p}</div>
      <Front/>
      
-     <Footer/>
+     <Footer style={{bottom:this.state.footer}}/>
       </div>
     );
   }
