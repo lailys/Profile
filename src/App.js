@@ -28,7 +28,8 @@ class App extends Component {
 
         handleScroll=(e)=> {
           const p=e.composedPath()[1].scrollY
-          console.log(!!window.chrome)
+          console.log(navigator.userAgent.match(/iPad/i)[0])
+          
          
          
       
@@ -85,10 +86,28 @@ if(!!window.chrome ){
 
      
     }
-  }else if(/iPad/i.test(navigator.userAgent)){
-    console.log(/iPad/i.test(navigator.userAgent))
+  }else if(navigator.userAgent.match(/iPad/i)!==null){
+    console.log(navigator.userAgent.match(/iPad/i))
+    if(p>=0 && p<90 ){
+
+      console.log(p)
+      this.setState({top:'0'})
+
+    }else if(p>81 &&p<1150){
+       
+      
+      console.log(p)
+      this.setState({top:'103%'})
+
+    }else if(p>1150){
+       
+      
+      console.log(p)
+      this.setState({top:'205%'})
+
+    }
 }else{
-     
+  console.log(/iPad/i.test(navigator.userAgent))   
   if(p>=0 && p<80 ){
 
     this.setState({top:'0',endTop:'-10%'})
