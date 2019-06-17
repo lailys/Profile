@@ -202,7 +202,7 @@ class App extends Component {
                 if (window.pageYOffset === 0) {
                   clearInterval(this.state.intervalId);
               }
-              window.scroll(0, 2700);
+              window.scroll(0, 2650);
 
               }else if(window.orientation===90){
                 if (window.pageYOffset === 0) {
