@@ -30,157 +30,61 @@ class App extends Component {
           const p=e.composedPath()[1].scrollY
           
          console.log(p)
+         console.log(/iPhone/i.test(navigator.userAgent))
+         console.log(/iPad/i.test(navigator.userAgent))
+         console.log(!!window.chrome)
          
-      
+         if(!!window.chrome ){
+          if(p>=0 && p<80){
 
-if(!!window.chrome ){
-
-
-  if(navigator.userAgent.match(/iPhone/i)!== null){
-    if(navigator.userAgent.match(/iPhone/i)[0]==="iPhone"){
-      if(window.orientation===0){
-
-
-        if(p>=0 && p<70 ){
-
-          this.setState({top:'0',endTop:'-10%'})
-
-        }else if(p>71 &&p<733){
-       
-          this.setState({top:'180%'})
-          if(p>300){
-            this.setState({endTop:'96%'})
-          }
-
-
-        }else if(p>734 ) {
-
-          this.setState({top:'280%'})
-        
-        if(p>801){
-          this.setState({endTop:'198%'})
-        }
-      }
-
-
-
-
-      }else if(window.orientation===90){
-
-
-
-        if(p>=0 && p<90 ){
-
-          this.setState({top:'0',endTop:'-10%'})
-
-        }else if(p>91 &&p<750){
-       
-          this.setState({top:'111%'})
-          if(p>300){
-            this.setState({endTop:'96%'})
-          }
-
-
-        }else if(p>750 ) {
-
-          this.setState({top:'215%'})
-        
-        if(p>801){
-          this.setState({endTop:'198%'})
-        }
-      }
-
-
-
-
-      }
-      else {
-
-
+            this.setState({top:'0',endTop:'-10%'})
   
-        if(p>=0 && p<80){
-
-          this.setState({top:'0',endTop:'-10%'})
-
-        }else if(p>81 &&p<407){
-       
-          this.setState({top:'102%'})
-          if(p>130){
-            this.setState({endTop:'96%'})
-          }
-
-
-        }else if(p>407 ) {
-
-          this.setState({top:'206%'})
-        
-        if(p>1010){
-          this.setState({endTop:'198%'})
-        }
-
-
-
-
-      }
-      }
-
-     
-    }
-  }else{
-  if(p>=0 && p<80 ){
-
-    this.setState({top:'0',endTop:'-10%'})
-
-  }else if(p>81 &&p<1000){
- 
-    this.setState({top:'102%'})
-    if(p>300){
-      this.setState({endTop:'96%'})
-    }
-
-
-  }else if(p>1001 ) {
-
-    this.setState({top:'202%'})
-  
-  if(p>801){
-    this.setState({endTop:'198%'})
-  }
-}
-  }
-      
-
-          }else if(/android/i.test(navigator.userAgent)){
-          
-
-
-          }else{
-        
-            if(p>=0 && p<80){
-
-              this.setState({top:'0',endTop:'-10%'})
-  
-            }else if(p>81 &&p<850){
-           
-              this.setState({top:'102%'})
-              if(p>130){
-                this.setState({endTop:'96%'})
-              }
-  
-  
-            }else if(p>851 ) {
-  
-              this.setState({top:'202%'})
-            
-            if(p>1010){
-              this.setState({endTop:'198%'})
+          }else if(p>81 &&p<407){
+         
+            this.setState({top:'102%'})
+            if(p>130){
+              this.setState({endTop:'96%'})
             }
+  
+  
+          }else if(p>407 ) {
+  
+            this.setState({top:'206%'})
+          
+          if(p>1010){
+            this.setState({endTop:'198%'})
           }
+  
+  
+  
+  
+        }
+  
 
-          }
+         }else{
+          if(p>=0 && p<80 ){
+
+            this.setState({top:'0',endTop:'-10%'})
         
-
+          }else if(p>81 &&p<1000){
          
+            this.setState({top:'102%'})
+            if(p>300){
+              this.setState({endTop:'96%'})
+            }
+        
+        
+          }else if(p>1001 ) {
+        
+            this.setState({top:'202%'})
+          
+          if(p>801){
+            this.setState({endTop:'198%'})
+          }
+        }
+         }
+
+
       
         };       
         
@@ -239,9 +143,11 @@ if(!!window.chrome ){
         }
       
         scrollStepW() {
-          if (window.pageYOffset === 0) {
-            clearInterval(this.state.intervalId);
-        }
+
+
+      
+
+        
           if(navigator.userAgent.match(/iPhone/i)!== null){
             if(navigator.userAgent.match(/iPhone/i)[0]==="iPhone"){
 
@@ -254,7 +160,7 @@ if(!!window.chrome ){
               }else if(window.orientation===90){
                 
                
-              window.scroll(0, 2700);
+              window.scroll(0,0);
              
 
               }}}else{
