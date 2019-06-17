@@ -43,7 +43,7 @@ class App extends Component {
       
                 }else if(p>147 &&p<1516){
                
-                  this.setState({top:'111%'})
+                  this.setState({top:'108%'})
                   if(p>1517){
                     this.setState({endTop:'96%'})
                   }
@@ -51,7 +51,7 @@ class App extends Component {
       
                 }else if(p>751 ) {
       
-                  this.setState({top:'260%'})
+                  this.setState({top:'210%'})
                 
                 if(p>801){
                   this.setState({endTop:'198%'})
@@ -89,7 +89,7 @@ class App extends Component {
       
                 }else if(p>91 &&p<750){
                
-                  this.setState({top:'102%'})
+                  this.setState({top:'111%'})
                   if(p>300){
                     this.setState({endTop:'96%'})
                   }
@@ -97,33 +97,33 @@ class App extends Component {
       
                 }else if(p>751 ) {
       
-                  this.setState({top:'202%'})
+                  this.setState({top:'240%'})
                 
                 if(p>801){
                   this.setState({endTop:'198%'})
                 }
               }
               }else if(window.orientation===90){
-                if(p>=0 && p<90 ){
+ if(p>=0 && p<90 ){
 
-                  this.setState({top:'0',endTop:'-10%'})
-      
-                }else if(p>91 &&p<750){
-               
-                  this.setState({top:'102%'})
-                  if(p>300){
-                    this.setState({endTop:'96%'})
-                  }
-      
-      
-                }else if(p>751 ) {
-      
-                  this.setState({top:'202%'})
-                
-                if(p>801){
-                  this.setState({endTop:'198%'})
+                this.setState({top:'0',endTop:'-10%'})
+    
+              }else if(p>91 &&p<750){
+             
+                this.setState({top:'102%'})
+                if(p>300){
+                  this.setState({endTop:'96%'})
                 }
+    
+    
+              }else if(p>751 ) {
+    
+                this.setState({top:'202%'})
+              
+              if(p>801){
+                this.setState({endTop:'198%'})
               }
+            }
               }
   
              
