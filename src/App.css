@@ -386,9 +386,10 @@ align-items: center;
   
 .front>.b {
   margin-top: 19vh;
+  height: 76vh;
 }
 .front>.c {
-  margin-top: 18vh;
+  margin-top: 16vh;
   height: 76vh;
 }
  
