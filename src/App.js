@@ -32,14 +32,38 @@ class App extends Component {
           console.log(navigator.userAgent)
          
           console.log(p)
-          if(navigator.userAgent.match(/iPhone/i)!== null){
-            if(navigator.userAgent.match(/iPhone/i)[0]==="iPhone"){
-  
-              if(p>=0 && p<80 ){
+
+          if(navigator.userAgent.match(/iPad/i)!== null){
+            if(navigator.userAgent.match(/iPad/i)[0]==="iPad"){
+             
+              if(p>=0 && p<146){
 
                 this.setState({top:'0',endTop:'-10%'})
     
-              }else if(p>81 &&p<750){
+              }else if(p>147 &&p<1516){
+             
+                this.setState({top:'102%'})
+                if(p>1517){
+                  this.setState({endTop:'96%'})
+                }
+    
+    
+              }else if(p>751 ) {
+    
+                this.setState({top:'202%'})
+              
+              if(p>801){
+                this.setState({endTop:'198%'})
+              }
+            }
+            }}else if(navigator.userAgent.match(/iPhone/i)!== null){
+            if(navigator.userAgent.match(/iPhone/i)[0]==="iPhone"){
+  
+              if(p>=0 && p<90 ){
+
+                this.setState({top:'0',endTop:'-10%'})
+    
+              }else if(p>91 &&p<750){
              
                 this.setState({top:'102%'})
                 if(p>300){
