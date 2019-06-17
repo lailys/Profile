@@ -65,7 +65,6 @@ z-index: 2;
 }
 
 .front {
-  background: yellow;
   position: absolute;
   top: 17.5%;
   color: white;
@@ -394,7 +393,7 @@ align-items: center;
  
 .footer{
   background: white;
-  top: 320%;
+  top: 310%;
 }
 .row1{
   justify-content: space-between; 
