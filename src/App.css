@@ -389,12 +389,13 @@ align-items: center;
 }
 .front>.c {
   margin-top: 16vh;
+  height: 78vh;
 }
  
 .footer{
   background: white;
   top: 316%;
-  height: 78vh;
+ 
 }
 .row1{
   justify-content: space-between; 
