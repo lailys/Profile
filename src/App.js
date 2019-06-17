@@ -218,6 +218,7 @@ if(!!window.chrome ){
         }
       
         scrollStepW() {
+        this.setState({r:navigator.userAgent.match(/iPad/i)[0]})
           if (window.pageYOffset === 0) {
             clearInterval(this.state.intervalId);
         }
