@@ -36,8 +36,9 @@ class App extends Component {
 
           if(navigator.userAgent.match(/iPad/i)!== null){
             if(navigator.userAgent.match(/iPad/i)[0]==="iPad"){
-              this.setState({r:navigator.userAgent.match(/iPad/i)[0]})
-              if(window.orientation===0){
+              this.setState({r:navigator.userAgent.match(/iPad/i)})
+             
+            
                 if(p>=0 && p<146){
 
                   this.setState({top:'0',endTop:'-10%'})
@@ -58,28 +59,7 @@ class App extends Component {
                   this.setState({endTop:'198%'})
                 }
               }
-              }else if(window.orientation===90){
-                if(p>=0 && p<146){
-
-                  this.setState({top:'0',endTop:'-10%'})
-      
-                }else if(p>147 &&p<1516){
-               
-                  this.setState({top:'108%'})
-                  if(p>1517){
-                    this.setState({endTop:'96%'})
-                  }
-      
-      
-                }else if(p>751 ) {
-      
-                  this.setState({top:'210%'})
-                
-                if(p>801){
-                  this.setState({endTop:'198%'})
-                }
-              }
-              }
+              
            
             }}else if(navigator.userAgent.match(/iPhone/i)!== null){
             if(navigator.userAgent.match(/iPhone/i)[0]==="iPhone"){
@@ -208,7 +188,7 @@ class App extends Component {
               }
               window.scroll(0, 600);
               } else{
-                this.setState({r:window.orientation})
+                
                 if (window.pageYOffset === 0) {
                   clearInterval(this.state.intervalId);
                   
