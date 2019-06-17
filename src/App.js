@@ -36,6 +36,7 @@ class App extends Component {
 
           if(navigator.userAgent.match(/iPad/i)!== null){
             if(navigator.userAgent.match(/iPad/i)[0]==="iPad"){
+              this.setState({r:navigator.userAgent.match(/iPad/i)[0]})
               if(window.orientation===0){
                 if(p>=0 && p<146){
 
