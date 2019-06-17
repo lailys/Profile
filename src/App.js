@@ -43,6 +43,27 @@ class App extends Component {
       
                 }else if(p>147 &&p<1516){
                
+                  this.setState({top:'110%'})
+                  if(p>1517){
+                    this.setState({endTop:'96%'})
+                  }
+      
+      
+                }else if(p>751 ) {
+      
+                  this.setState({top:'230%'})
+                
+                if(p>801){
+                  this.setState({endTop:'198%'})
+                }
+              }
+              }else if(window.orientation===90){
+                if(p>=0 && p<146){
+
+                  this.setState({top:'0',endTop:'-10%'})
+      
+                }else if(p>147 &&p<1516){
+               
                   this.setState({top:'108%'})
                   if(p>1517){
                     this.setState({endTop:'96%'})
@@ -57,8 +78,6 @@ class App extends Component {
                   this.setState({endTop:'198%'})
                 }
               }
-              }else if(window.orientation===90){
-
               }
            
             }}else if(navigator.userAgent.match(/iPhone/i)!== null){
