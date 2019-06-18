@@ -37,7 +37,8 @@ class App extends Component {
          if(!!window.chrome ){
 
 
-if(/iPhone/i.test(navigator.userAgent)){
+          if(navigator.userAgent.match(/iPhone/i)!== null){
+            if(navigator.userAgent.match(/iPhone/i)[0]==="iPhone"){
   this.setState({r:1})
 
 
@@ -85,7 +86,7 @@ if(/iPhone/i.test(navigator.userAgent)){
     }}
 
 
-
+  }
 
 }else{
 
