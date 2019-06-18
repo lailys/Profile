@@ -10,6 +10,10 @@ import * as Waypoint from 'react-waypoint'
 
 class App extends Component {
 
+
+
+
+
   state={
     top:'0',
     endTop:'-10%',
@@ -17,18 +21,35 @@ class App extends Component {
     footer:0,
 
         }
-      
+
+     
+
+
         componentDidMount() {
+         
           window.addEventListener('scroll', this.handleScroll);
+          
+  
+      
         };
-        
         componentWillUnmount() {
           window.removeEventListener('scroll', this.handleScroll);
-        };
+     
+
+        }
+   
+        
 
         handleScroll=(e)=> {
+          window.onbeforeunload = function () {
+            window.scrollTo(0, 0);
+          }
+ 
           const p=e.composedPath()[1].scrollY
-          
+
+          console.log(window.location) 
+      
+       
          console.log(p)
          console.log(/iPhone/i.test(navigator.userAgent))
          console.log(/iPad/i.test(navigator.userAgent))
@@ -264,8 +285,8 @@ class App extends Component {
 
          }
 
-
       
+     
         };   
         
         
@@ -388,7 +409,7 @@ class App extends Component {
 
   render() {
     return (
-      <div className="App" >
+      <div className="App"  >
        
           <div className="header" style={{top:this.state.top}}>
                 <a className="logo" onClick={(e) =>this.setId(e)}>LailyS</a>
