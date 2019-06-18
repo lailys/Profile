@@ -38,15 +38,6 @@ class App extends Component {
           if(navigator.userAgent.match(/iPhone/i)[0]==="iPhone"){
 
             this.setState({r:1})
-          }}
-         
-         if(!!window.chrome ){
-
-
-          if(navigator.userAgent.match(/iPhone/i)!== null){
-            if(navigator.userAgent.match(/iPhone/i)[0]==="iPhone"){
-  this.setState({r:1})
-
 
   if(p>=0 && p<62 ){
 
@@ -90,6 +81,16 @@ class App extends Component {
     if(p>1010){
       this.setState({endTop:'198%'})
     }}
+          }}
+         
+         else if(!!window.chrome ){
+
+
+          if(navigator.userAgent.match(/iPhone/i)!== null){
+            if(navigator.userAgent.match(/iPhone/i)[0]==="iPhone"){
+  this.setState({r:1})
+
+
 
 
   }
