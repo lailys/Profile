@@ -13,7 +13,7 @@ class App extends Component {
   state={
     top:'0',
     endTop:'-10%',
-    r:0,
+    r:"",
     footer:0,
 
         }
@@ -34,10 +34,55 @@ class App extends Component {
          console.log(/iPad/i.test(navigator.userAgent))
          console.log(!!window.chrome)
 
-         if(navigator.userAgent.match(/iPhone/i)!== null){
+         if(navigator.userAgent.match(/iPad/i)!== null){
+          if(navigator.userAgent.match(/iPad/i)[0]==="iPad"){
+
+
+  if(p>=0 && p<62 ){
+
+
+
+
+    this.setState({top:'0',endTop:'-10%'})
+    if(p>17){
+      this.setState({endTop:'96%'})
+    }
+
+
+
+
+  }
+
+
+
+  else if(p>=62 && p<738 ){
+
+
+
+
+    this.setState({top:'111%'})
+  
+    if(p>652){
+      this.setState({endTop:'198%'})
+    }else{
+      this.setState({endTop:'96%'})
+    }
+
+
+
+
+  }else if(p>738){
+
+
+
+    this.setState({top:'215%'})
+
+    if(p>1010){
+      this.setState({endTop:'198%'})
+    }}
+          }} else if(navigator.userAgent.match(/iPhone/i)!== null){
           if(navigator.userAgent.match(/iPhone/i)[0]==="iPhone"){
 
-            this.setState({r:1})
 
   if(p>=0 && p<62 ){
 
@@ -88,7 +133,7 @@ class App extends Component {
 
           if(navigator.userAgent.match(/iPhone/i)!== null){
             if(navigator.userAgent.match(/iPhone/i)[0]==="iPhone"){
-  this.setState({r:1})
+
 
 
 
@@ -98,7 +143,7 @@ class App extends Component {
 }else{
 
 
-  this.setState({r:10})
+
 
 
 
