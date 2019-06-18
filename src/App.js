@@ -33,6 +33,12 @@ class App extends Component {
          console.log(/iPhone/i.test(navigator.userAgent))
          console.log(/iPad/i.test(navigator.userAgent))
          console.log(!!window.chrome)
+
+         if(navigator.userAgent.match(/iPhone/i)!== null){
+          if(navigator.userAgent.match(/iPhone/i)[0]==="iPhone"){
+
+            this.setState({r:1})
+          }}
          
          if(!!window.chrome ){
 
