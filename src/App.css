@@ -1,3 +1,4 @@
+
 .App {
   display: flex;
   justify-content: center;
@@ -243,9 +244,9 @@
 .row1 {
   display: flex;
   align-items: center;
-  justify-content: center;
+  justify-content: space-between;
   height: 90%;
-  width: 100%;
+  width: 80%;
 }
 
 .row2 {
@@ -253,52 +254,10 @@
   display: flex;
   align-items: center;
   justify-content: center;
-  height: 30%;
+  height: 25%;
   width: 100%;
 }
 
-.github {
-
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  align-items: center;
-  margin-left: 7.5%;
-  width: 20%;
-  height: 20%;
-}
-
-.linkedin {
-
-
-  display: flex;
-  align-items: center;
-  justify-content: flex-end;
-  align-items: center;
-  margin-left: 7.5%;
-  width: 20%;
-  height: 20%;
-}
-
-.email {
-  justify-content: flex-start;
-  display: flex;
-  align-items: center;
-  margin-left: 7.5%;
-  width: 20%;
-  height: 20%;
-}
-
-.codepen {
-
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  align-items: center;
-  margin-left: 7.5%;
-  width: 20%;
-  height: 20%;
-}
 
 a {
   text-decoration: none;
@@ -422,11 +381,10 @@ a:active {
     width: 90vw;
   }
 
-  .github,
-  .linkedin,
-  .email,
-  .codepen {
-    margin-left: 0;
+  #github,
+  #linkedin,
+  #email,
+  #codepen {
     display: flex;
     align-items: center;
     justify-content: center;

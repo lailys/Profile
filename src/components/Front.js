@@ -7,6 +7,7 @@ class Front extends Component {
     render() {
         return (
             <div className="front" >
+               
                 <div className="parts a">
                     <div className="title" >
                         <div className="title-a">Web</div>
