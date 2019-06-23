@@ -22,7 +22,7 @@ class Front extends Component {
                         <span className="about-title">About Me:<br /><br /></span>
                         <br /><br />
 
-                        <span className="about-note">I'm an entry level designer/developer based in Bayarea. I have a passion for desining Web/App and develop application.
+                        <span className="about-note">I'm a designer/developer based in the Bay area. I have a passion for designing web/app and develop applications..
                 <br />
                             <br />
 
