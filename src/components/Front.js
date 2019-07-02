@@ -37,7 +37,7 @@ class Front extends Component {
                 ]
                 <div className="parts c">
                     <div className="card shopping">
-                        <a className="project-name" href="https://list2shop.herokuapp.com/">Project:<br />"Shopping List"</a>
+                        <a className="project-name" href="https://list2shop.herokuapp.com/">"Shopping List"<br /><div style={{fontSize:"1vw"}}>(in progress)</div></a>
                     </div>
                     <div className="card-shadow"></div>
 

@@ -11,7 +11,7 @@ class Footer extends Component {
             </a>
        
      
-                <a id="github"    href="https://github.com/lailys" className="fa fa-github"/>
+                <a id="github"    href="https://github.com/lailys" className="fa fa-github"></a>
               
         
                 <a id="codepen "  href="https://codepen.io/lailys165" className="fa fa-codepen"/>
