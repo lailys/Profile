@@ -22,15 +22,9 @@ class Front extends Component {
                         <span className="about-title">About Me:<br /><br /></span>
                         <br /><br />
 
-                        <span className="about-note">I'm a designer/developer based in the Bay area. I have a passion for designing web/app and develop applications..
-                <br />
-                            <br />
-
-                            <span style={{ fontSize: "120%", fontWeight: "bold", marginLeft: "40%" }}>skills:</span>
-                            <br />
-
-                            <br />
-                            CSS, Javascript, React, Redux, Bootstrap...
+                        <span className="about-note">I am a self-motivated analytically-minded developer with a passion for front-end development. I can work well indepedently or in a team and specialize in building fluid apps with React, Redux and Javascript.
+     
+                
                 </span>
                     </div>
                 </div>
