@@ -174,7 +174,7 @@
   display: flex;
   align-items: center;
   justify-content: center;
-  background: url("./components/pic4.jpg");
+  background: rgb(247, 196, 31);
   background-position: center;
   background-size: cover;
   width: 12vw;
@@ -184,6 +184,9 @@
   top: 5vw;
   z-index: 3;
   transform: rotate(-9deg);
+}
+.card:hover{
+  background: yellow;
 }
 
 .card-shadow {
