@@ -254,6 +254,7 @@
 }
 
 .row2 {
+
   font-size: .7vw;
   display: flex;
   align-items: center;
@@ -262,23 +263,35 @@
   width: 100%;
 }
 
-
-a {
+a{
   text-decoration: none;
-  color: #33322B;
 }
 
-a:active {
-  color: #33322B;
+.fa{
+  font-size: 3vh;
+  text-align: center;
+line-height: 4vh;
+  margin:auto;
+  padding: 0;
+  border-radius: 50%;
+ border:none;
+  color: rgb(54, 54, 51);
+  height: 4.5vh;
+  width: 4.5vh;
 }
 
 
 
-
-@media only screen and (min-width: 767px) and (max-width: 1024px) {
-
-
+.fa:hover{
+ background: #33322B;
+  color: white;
 }
+ 
+
+
+
+
+
 
 @media only screen and (min-width: 450px) and (max-width: 766px) {
 
