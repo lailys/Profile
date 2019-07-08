@@ -415,7 +415,7 @@ class App extends Component {
                 <a className="logo" onClick={(e) =>this.setId(e)}>LailyS</a>
                 <div>{this.state.r}</div>
                 <a className="about" onClick={(e) =>this.setId(e)}> About</a>
-                <a className="work"  onClick={(e)=>this.setId(e)}> Work</a>
+                <a className="work"  onClick={(e)=>this.setId(e)}> Projects</a>
           </div>
           <div className="page-end" style={{top:this.state.endTop}}>
           

@@ -31,7 +31,13 @@ class Front extends Component {
                 ]
                 <div className="parts c">
                     <div className="card shopping">
-                        <a className="project-name" href="https://list2shop.herokuapp.com/">"Shopping List"<br /><div style={{fontSize:"1vw"}}>(in progress)</div></a>
+                        <a  href="https://list2shop.herokuapp.com/" className="card-content">
+                           <div className="project-name">"2Shop"</div> 
+                        
+                           <div id="card-explenation" >
+                           2Shop is a mobile one-page app to help users create a quick shopping list. It supports creating a new list by tapping and entering items, deleting items via a custom swipe interaction (which I wrote the component for), and marking items as done by tapping the tick next to the item. <br/>   (in progress)                     </div>
+                            </a>
+               
                     </div>
                     <div className="card-shadow"></div>
 

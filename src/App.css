@@ -1,4 +1,3 @@
-
 .App {
   display: flex;
   justify-content: center;
@@ -180,20 +179,27 @@
   width: 12vw;
   height: 12vw;
   position: relative;
-  left: -25vw;
+  left: -20vw;
   top: 5vw;
   z-index: 3;
   transform: rotate(-9deg);
 }
-.card:hover{
+
+.card:hover {
   background: yellow;
+
+}
+
+.card:hover #card-explenation {
+  visibility: visible;
+
 }
 
 .card-shadow {
   width: 11vw;
   height: 10vw;
   position: relative;
-  left: -37vw;
+  left: -32vw;
   top: 6vw;
   transform: rotate(-9deg);
   z-index: 2;
@@ -210,23 +216,47 @@
   right: -1vw;
   bottom: 15px;
   left: auto;
-
   box-shadow: 0 .8vw .8vw rgb(17, 17, 17);
   transform: rotate(5deg);
 }
 
-.project-name {
-  color: #33322B;
+.card-content {
+  position: relative;
+  width: 100%;
   height: 100%;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  text-align: center;
+  left: 0;
+  top: 0;
+  
+}
+
+.project-name {
+  margin: 0 auto 2vh auto;
+  color: #33322B;
   font-family: 'Thasadith', sans-serif;
-  width: 90%;
-  height: 90%;
-  font-size: 2vw;
+  font-size: 200%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 100%;
+
+}
+
+#card-explenation {
+  visibility: hidden;
+  margin: 0 auto;
+  color: #33322B;
+  background: rgba(255, 255, 0, 0.651);
+  font-family: 'Thasadith', sans-serif;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  width: 200%;
+  height: 100%;
+
+
+
 }
 
 
@@ -263,18 +293,18 @@
   width: 100%;
 }
 
-a{
+a {
   text-decoration: none;
 }
 
-.fa{
+.fa {
   font-size: 3vh;
   text-align: center;
-line-height: 4vh;
-  margin:auto;
+  line-height: 4vh;
+  margin: auto;
   padding: 0;
   border-radius: 50%;
- border:none;
+  border: none;
   color: rgb(54, 54, 51);
   height: 4.5vh;
   width: 4.5vh;
@@ -282,11 +312,11 @@ line-height: 4vh;
 
 
 
-.fa:hover{
- background: #33322B;
+.fa:hover {
+  background: #33322B;
   color: white;
 }
- 
+
 
 
 
