@@ -34,9 +34,9 @@ class Front extends Component {
                         <a  href="https://limitless-crag-92371.herokuapp.com/" className="card-content">
                            <div className="project-name">"2Shop"</div> 
                         
-                           <div id="card-explenation" >
-                           2Shop is a mobile one-page app to help users create a quick shopping list. It supports creating a new list by tapping and entering items, deleting items via a custom swipe interaction (which I wrote the component for), and marking items as done by tapping the tick next to the item. <br/>   (in progress)                     </div>
+                           
                             </a>
+                            <div id="card-explenation" >2Shop is a mobile one-page app to help users create a quick shopping list. It supports creating a new list by tapping and entering items, deleting items via a custom swipe interaction (which I wrote the component for), and marking items as done by tapping the tick next to the item. <br/>   (in progress)</div>
                
                     </div>
                     <div className="card-shadow"></div>

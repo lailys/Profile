@@ -230,10 +230,10 @@
 }
 
 .project-name {
-  margin: 0 auto 2vh auto;
+  margin: 0 auto;
   color: #33322B;
   font-family: 'Thasadith', sans-serif;
-  font-size: 200%;
+  font-size: 3vw;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -243,20 +243,22 @@
 }
 
 #card-explenation {
+  padding: 1vh;
+  position: absolute;
+  left: -4vw;
+  top: 25vh;
   visibility: hidden;
   margin: 0 auto;
   color: #33322B;
   background: rgba(255, 255, 0, 0.651);
+  box-shadow: 0 .8vw .8vw rgb(173, 172, 172);
   font-family: 'Thasadith', sans-serif;
   display: flex;
   justify-content: center;
   align-items: center;
   text-align: center;
-  width: 200%;
-  height: 100%;
-
-
-
+  width: 30vw;
+  height:30vh;
 }
 
 
@@ -374,7 +376,16 @@ a {
     align-items: center;
   }
 
+  #card-explenation {
 
+    position: absolute;
+    left: -13vw;
+    top: 25vw;
+    color: rgb(24, 23, 20);
+    background: rgba(255, 255, 0, 0.9);
+    width: 60vw;
+    height: 40vw;
+  }
 
 }
 
@@ -438,7 +449,15 @@ a {
     align-items: center;
   }
 
-
+  #card-explenation {
+    position: absolute;
+    left: -5vw;
+    top: 30vw;
+    color: rgb(24, 23, 20);
+    background: rgba(255, 255, 0, 0.9);
+    width: 60vw;
+    height: 40vw;
+  }
 
 }
 
