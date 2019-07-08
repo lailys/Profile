@@ -31,7 +31,7 @@ class Front extends Component {
                 ]
                 <div className="parts c">
                     <div className="card shopping">
-                        <a  href="https://list2shop.herokuapp.com/" className="card-content">
+                        <a  href="https://limitless-crag-92371.herokuapp.com/" className="card-content">
                            <div className="project-name">"2Shop"</div> 
                         
                            <div id="card-explenation" >
