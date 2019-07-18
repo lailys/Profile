@@ -1,436 +1,166 @@
-import React, { Component } from 'react';
-import './App.css';
-import Header from './components/Header'
-import Front from './components/Front'
-import Footer from './components/Footer'
-import * as Waypoint from 'react-waypoint'
-
-
-
+import React, { Component } from "react";
+import "./App.css";
+import Footer from "./components/Footer";
 
 class App extends Component {
+  state = {
+    idA: "active",
+    idP: ""
+  };
+  componentDidMount() {
+    window.addEventListener("scroll", this.handleScroll);
 
-
-
-
-
-  state={
-    top:'0',
-    endTop:'-10%',
-    r:"",
-    footer:0,
-
-        }
-
-     
-
-
-        componentDidMount() {
-         
-          window.addEventListener('scroll', this.handleScroll);
-          
-  
-      
-        };
-        componentWillUnmount() {
-          window.removeEventListener('scroll', this.handleScroll);
-     
-
+    this.handleScroll();
+  }
+  componentWillUnmount() {
+    window.removeEventListener("scroll", this.handleScroll);
+  }
+  handleScroll = e => {
+    if (e) {
+      const path=e.composedPath() || e.path
+        if (path[1].pageYOffset> path[1].innerHeight * 2.45) {
+          this.setState({ idP: "active", idA: "" });
+        } else {
+          this.setState({ idA: "active", idP: "" });
         }
    
-        
-
-        handleScroll=(e)=> {
-          window.onbeforeunload = function () {
-            window.scrollTo(0, 0);
-          }
- 
-          const p=e.composedPath()[1].scrollY
-
-          console.log(window.location) 
-      
-       
-         console.log(p)
-         console.log(/iPhone/i.test(navigator.userAgent))
-         console.log(/iPad/i.test(navigator.userAgent))
-         console.log(!!window.chrome)
-
-         if(/iPad/i.test(navigator.userAgent)){
-      
-            
-
-
-  if(p>=0 && p<62 ){
-
-
-
-
-    this.setState({top:'0',endTop:'-10%'})
-    if(p>17){
-      this.setState({endTop:'96%'})
-    }
-
-
-
-
-  }
-
-
-
-  else if(p>=62 && p<738 ){
-
-
-
-
-    this.setState({top:'111%'})
-  
-    if(p>652){
-      this.setState({endTop:'198%'})
-    }else{
-      this.setState({endTop:'96%'})
-    }
-
-
-
-
-  }else if(p>738){
-
-
-
-    this.setState({top:'215%'})
-
-    if(p>1010){
-      this.setState({endTop:'198%'})
-    }}
-          } else if(navigator.userAgent.match(/iPhone/i)!== null){
-          if(navigator.userAgent.match(/iPhone/i)[0]==="iPhone"){
-
-
-
-            if(window.orientation===0){
-
-
-
-              if(p>=0 && p<62 ){
-
-
-
-
-                this.setState({top:'0',endTop:'-10%'})
-                if(p>17){
-                  this.setState({endTop:'96%'})
-                }
-            
-            
-            
-            
-              }
-            
-            
-            
-              else if(p>=62 && p<738 ){
-            
-            
-            
-            
-                this.setState({top:'111%'})
-              
-                if(p>652){
-                  this.setState({endTop:'198%'})
-                }else{
-                  this.setState({endTop:'96%'})
-                }
-            
-            
-            
-            
-              }else if(p>738){
-            
-            
-            
-                this.setState({top:'215%'})
-            
-                if(p>1010){
-                  this.setState({endTop:'198%'})
-                }}
-
-
-
-
-
-            }else{
-
-
-
-              if(p>=0 && p<80){
-
-                this.setState({top:'0',endTop:'-10%'})
-                if(p>44){
-                  this.setState({endTop:'96%'})
-                }
-            
-              }else if(p>81 &&p<740){
-             
-                this.setState({top:'102%'})
-                
-                if(p>702){
-                  this.setState({endTop:'198%'})
-                }else{
-                  this.setState({endTop:'96%'})
-                }
-            
-            
-              }else if(p>740 ) {
-            
-                this.setState({top:'206%'})
-              
-              if(p>1010){
-                this.setState({endTop:'198%'})
-              }}
-            
-
-            }
-
 
  
-          }}
-         
-         else if(!!window.chrome ){
 
-
-          if(navigator.userAgent.match(/iPhone/i)!== null){
-            if(navigator.userAgent.match(/iPhone/i)[0]==="iPhone"){
-
-
-
-
-
-  }
-
-}else{
-
-
-
-
-
-
-  if(p>=0 && p<80){
-
-    this.setState({top:'0',endTop:'-10%'})
-    if(p>44){
-      this.setState({endTop:'96%'})
-    }
-
-  }else if(p>81 &&p<740){
- 
-    this.setState({top:'102%'})
-    
-    if(p>702){
-      this.setState({endTop:'198%'})
-    }else{
-      this.setState({endTop:'96%'})
-    }
-
-
-  }else if(p>740 ) {
-
-    this.setState({top:'206%'})
-  
-  if(p>1010){
-    this.setState({endTop:'198%'})
-  }}
-
-
-
-
-}
-
-
-
-
-
-
-
-         }else{
-
-
-
-
-
-          if(p>=0 && p<80 ){
-
-            this.setState({top:'0',endTop:'-10%'})
-        
-          }else if(p>81 &&p<1000){
-         
-            this.setState({top:'102%'})
-            if(p>300){
-              this.setState({endTop:'96%'})
-            }
-        
-        
-          }else if(p>1001 ) {
-        
-            this.setState({top:'202%'})
-          
-          if(p>801){
-            this.setState({endTop:'198%'})
-          }
-        }
-
-
-
-
-
-
-         }
-
-      
-     
-        };   
-        
-        
-
-
-
-
-
-
-
-
-        
-        
-        scrollStepT() {
-          
-        
-          if(!!window.chrome) {if (window.pageYOffset === 0) {
-              clearInterval(this.state.intervalId);
-          }
-          window.scroll(0, window.pageYOffset - this.props.scrollStepInPx);}else{
-            window.scroll(0, 0)
-          }
-        }
-      
-
-        scrollStepA() {
-          if(navigator.userAgent.match(/iPhone/i)!== null){
-            if(navigator.userAgent.match(/iPhone/i)[0]==="iPhone"){
-
-            if(window.orientation===0){
-                if (window.pageYOffset === 0) {
-                  clearInterval(this.state.intervalId);
-                  
-              }
-              window.scroll(0, 600);
-              } else{
-                
-                if (window.pageYOffset === 0) {
-                  clearInterval(this.state.intervalId);
-                  
-              }
-              window.scroll(0, 376);
-
-              }
-
-           
-
-            }}else if(!!window.chrome){
-              if (window.pageYOffset === 0) {
-                clearInterval(this.state.intervalId);
-            }
-            window.scroll(0, 700);
-            }else if(/android/i.test(navigator.userAgent)){
-            
-            }else{
-              if (window.pageYOffset === 0) {
-                clearInterval(this.state.intervalId);
-                
-            }
-            window.scroll(0, 760)
-            }
-          
-       
-
-       
-        }
-      
-        scrollStepW() {
-
-
-      
-
-        
-          if(navigator.userAgent.match(/iPhone/i)!== null){
-            if(navigator.userAgent.match(/iPhone/i)[0]==="iPhone"){
-
-              if(window.orientation===0){
-                if (window.pageYOffset === 0) {
-                  clearInterval(this.state.intervalId);
-              }
-              
-                window.scroll(0, 1200);
-             
-           
-
-              }else{
-                
-                if (window.pageYOffset === 0) {
-                  clearInterval(this.state.intervalId);
-              }
-              window.scroll(0,76);
-             
-
-              }}}else{
-                if (window.pageYOffset === 0) {
-                  clearInterval(this.state.intervalId);
-              }
-            
-              window.scroll(0, 2835);
-              }
-          
-         
    
-        }
-       
-
-        setId=(e)=>{
-          const p=e.target.className
-          if(p==="logo"){
-            let intervalId = setInterval(this.scrollStepT());
-            this.setState({ intervalId: intervalId });
-          }else if(p==="about"){
-            let intervalId = setInterval(this.scrollStepA());
-            this.setState({ intervalId: intervalId });
-          }else if(p==="work"){
-            let intervalId = setInterval(this.scrollStepW());
-            this.setState({ intervalId: intervalId });
-          }
-        }
+    }
+  };
 
   render() {
     return (
-      <div className="App"  >
-       
-          <div className="header" style={{top:this.state.top}}>
-                <a className="logo" onClick={(e) =>this.setId(e)}>LailyS</a>
-                <div>{this.state.r}</div>
-                <a className="about" onClick={(e) =>this.setId(e)}> About</a>
-                <a className="work"  onClick={(e)=>this.setId(e)}> Projects</a>
+      <div className="App">
+        <div className="background" />
+        <div className="page">
+          <div id="front">
+            <div className="part-front">
+              <div className="me-name">
+                <h1>Laily Sarvarian</h1>
+                <h2>Web Developer</h2>
+              </div>
+            </div>
+            <div id="me-next">
+              <div
+                className="fa fa-caret-down bounce"
+                style={{ fontSize: "400%", color: "rgb(3, 194, 178)" }}
+              />
+            </div>
           </div>
-          <div className="page-end" style={{top:this.state.endTop}}>
-          
-                <div className="line">.</div>
-                <div className="line">.</div>
-                <div className="line">.</div>
+
+          <div className="resume">
+            <div id="nav-zone">
+              <ul id="navbar">
+                <li>
+                  <div id={this.state.idA} className="classA">
+                    Profile
+                  </div>
+                </li>
+                <li>
+                  <div id={this.state.idP} className="classP">
+                    Projects
+                  </div>
+                </li>
+              </ul>
+            </div>
+            <div id="about">
+              <h3 className="about-title">About me</h3>
+
+              <p className="about-content ">
+                I am a self-motivated analytically-minded developer with a
+                passion for front-end development. I can work well indepedently
+                or in a team and specialize in building fluid apps with React,
+                Redux and Javascript.
+              </p>
+
+              <div className="about-pic">
+                <div className="pic" />
+              </div>
+
+              <h3 className="about-skills">Skills</h3>
+              <div className="skills">
+                <div id="expertise">
+                  <div className="skill">HTML</div>
+                  <div className="skill">CSS</div>
+                  <div className="skill">Javascript</div>
+                  <div className="skill">React</div>
+                  <div className="skill">Redux</div>
+                  <div className="skill">Node</div>
+                  <div className="skill">Bootstrap</div>
+                  <div className="skill">Solidity</div>
+                </div>
+              </div>
+            </div>
+
+            <div id="work">
+              <div class="projects">
+                <div className="first project">
+                  <div className="name first-name ">2SHOP</div>
+                  <div className="description first-description">
+                    This is an in progress project
+                  </div>
+                </div>
+                <div className="second project">
+                  <div className="name  ">
+                  <div className="dots">
+                      <div id="a" className="dbounce">
+                        .
+                      </div>
+                      <div id="b" className="dbounce">
+                        .
+                      </div>
+                      <div id="c" className="dbounce">
+                        .
+                      </div>
+                    </div>
+</div>
+                  <div className="description " />
+                </div>
+                <div className="third project">
+                  <div className="name  " >
+                  <div className="dots">
+                      <div id="a" className="dbounce">
+                        .
+                      </div>
+                      <div id="b" className="dbounce">
+                        .
+                      </div>
+                      <div id="c" className="dbounce">
+                        .
+                      </div>
+                    </div>
+</div>
+                  <div className="description " />
+                </div>
+                <div className="forth project">
+                  <div className="name  " >
+                  <div className="dots">
+                      <div id="a" className="dbounce">
+                        .
+                      </div>
+                      <div id="b" className="dbounce">
+                        .
+                      </div>
+                      <div id="c" className="dbounce">
+                        .
+                      </div>
+                    </div>
+</div>
+                  <div className="description " />
+                </div>
+              </div>
+            </div>
+            <div id="contact">
+              <Footer />
+            </div>
           </div>
-         <div>{this.state.p}</div>
-     <Front/>
-     
-     <Footer style={{bottom:this.state.footer}}/>
+        </div>
       </div>
     );
   }
 }
 
 export default App;
-

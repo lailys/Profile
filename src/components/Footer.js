@@ -6,17 +6,18 @@ class Footer extends Component {
             <div className="footer">
                 <div className="row1">
 
-                    <a id="linkedin" href="https://www.linkedin.com/in/lailysarvarian/" className="fa fa-linkedin"></a>
+                    <a href="https://www.linkedin.com/in/lailysarvarian/" className="fa fa-linkedin link"/>
 
-                    <a id="github" href="https://github.com/lailys" className="fa fa-github"></a>
+                    <a href="https://github.com/lailys" className="fa fa-github link"/>
 
-                    <a id="codepen " href="https://codepen.io/lailys165" className="fa fa-codepen" />
+                    <a href="https://codepen.io/lailys165" className="fa fa-codepen link" />
 
-                    <a id="email " href="mailto:laily@lailys.com" className="fa fa-envelope-o" />
+                    <a href="mailto:laily@lailys.com" className="fa fa-envelope-o link" />
 
                 </div>
+                <div className="row2">© Laily Sarvarian 2019 
+All Rights Reserved.</div>
 
-                <p className="row2">© 2019 Laily Sarvarian. All rights reserved.</p>
             </div>
         );
     }

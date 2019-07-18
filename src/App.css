@@ -1,478 +1,2136 @@
-.App {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  flex-flow: column;
+body {
+}
+.background {
+  background: url("https://images.pexels.com/photos/1484759/pexels-photo-1484759.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260");
+  background-position: center;
+  background-size: cover;
+  position: fixed;
+  z-index: -1;
   height: 100vh;
   width: 100vw;
-
 }
 
-.header {
-  z-index: 2;
-  display: flex;
-  align-items: center;
-  position: absolute;
-  overflow: hidden;
-  color: #33322B;
-  transition: top 1s;
-  box-sizing: border-box;
-  height: 17vh;
-  width: 100%;
+.page {
+  z-index: 1;
+
+  width: 100vw;
 }
 
-.logo {
-  display: flex;
-  justify-content: flex-start;
-  align-items: center;
-  margin-left: 7.5%;
-  font-family: 'Allerta Stencil', sans-serif;
-  font-size: 8.9vh;
-  width: 68%;
-  height: 100vh;
-}
-
-.about,
-.work {
-  color: #48473d;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  font-family: 'Poiret One', cursive;
-  font-size: 2.2vw;
-  width: 8vw;
-  margin-right: 2%;
-}
-
-.page-end {
-  font-family: 'Poiret One', cursive;
-  font-size: 4vw;
-  position: absolute;
-
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  z-index: 2;
-  width: 100%;
-  height: 2vh;
-}
-
-.line {
-  opacity: .5;
-  color: #acaa9d;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  width: 2vw;
-  margin: 0 .1% 0 .1%;
-  width: 2%;
-}
-
-.front {
-
-  position: absolute;
-  top: 17.5%;
+#front {
+  background: #ed6a5ede;
+  text-align: center;
   color: white;
-  width: 85%;
-  height: 275vh;
+  height: 100vh;
+  width: 100vw;
 }
 
-
-.front>.a {
-  background: url("./components/pic1.jpg");
-  background-position: center;
-  display: flex;
-  background-size: cover;
-  justify-content: center;
-  align-items: center;
-  height: 78vh;
-  font-family: 'Poiret One', cursive;
+.me-name {
+  text-align: center;
+  position: absolute;
+  top: 35%;
+  width: 100vw;
 }
-
-.title {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
-
-.title-a {
-  font-size: 10vw;
-  margin-right: 2vw;
-}
-
-.title-b {
-  font-size: 10vw;
-}
-
-.title-c {
+h1 {
+  margin: 0 auto;
+  padding: 5px;
+  font-family: "Expletus Sans", cursive;
+  font-size: 460%;
   font-weight: bold;
-  font-size: 24vw;
+  line-height: 120%;
+  border-bottom: 0.2vh solid white;
+  width: 65vw;
+}
+h2 {
+  margin: 1.5vh auto;
+  font-family: "Montserrat", sans-serif;
+  font-weight: 400;
+  font-size: 180%;
 }
 
-.title-d {
-  font-size: 10vw;
+#me-next {
+  margin: 0 auto;
+  position: absolute;
+  bottom: 0;
+  width: 100vw;
 }
 
-
-
-.front>.b {
-  background: url("./components/pic2.jpg");
-  background-position: center;
-  background-size: cover;
-  margin-top: 23.5vh;
-  justify-content: center;
-  height: 78vh;
-  word-spacing: .6vw;
-  font-family: 'Open Sans', sans-serif;
-  position: relative;
-
+.resume {
+  width: 100vw;
+  z-index: 0;
 }
 
-.content {
+#nav-zone {
+  position: absolute;
+  top: 100%;
+  right: 1.5vw;
+  width: 6vw;
+  height: 228vh;
+}
+#navbar {
+  z-index: 10;
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+  position: -webkit-sticky; /* Safari */
+  position: sticky;
+  top: 25vh;
+  list-style-type: none;
+  width: 100%;
+}
+
+li div {
+  font-family: "Open Sans Condensed", sans-serif;
+  font-size: 5vw;
+  font-weight: 700;
+  letter-spacing: 0.04em;
+  line-height: 6vw;
+  writing-mode: vertical-rl;
+  text-orientation: mixed;
+
+  text-decoration: none;
+  width: 100%;
+}
+
+.classA {
+  text-align: center;
+  color:  #d8fdf0;;
+  height: 28vh;
+}
+.classP {
+  text-align: left;
+  color: #fabfaf;
+  height: 50vh;
+}
+
+#about {
+  background: #fabfaf;
+  margin: 0 auto;
 
   display: flex;
   flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  width: 50vw;
-  height: 68vh;
-  position: absolute;
-  top: 6vh;
-  left: 4vw;
+  width: 100vw;
+  height: 150vh;
 }
+
+/*.about-content {
+  background: #190e41;
+  margin: 0 auto;
+  padding: 0;
+  width: 100vw;
+  height: 50vh;
+}*/
 
 .about-title {
+  margin: 0 auto;
+  padding: 0;
+  display: flex;
+  justify-content: center;
+  align-items: flex-end;
+  box-sizing: border-box;
+  border-bottom: 0.5px solid white;
+  text-align: center;
+  font-size: 370%;
+  font-family: "Open Sans Condensed", sans-serif;
+  font-weight: 500;
+
+  color: rgb(3, 194, 178);
+  width: 75vw;
+  height: 37%;
+}
+.about-content {
+  margin: 0 auto;
+  padding: 1.5%;
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  font-family: "Open Sans Condensed", sans-serif;
+  text-align: center;
+  font-size: 170%;
+  font-weight: 300;
+  word-spacing: 0.05em;
+  color: white;
+
+  width: 70vw;
+  height: 30%;
+}
+.about-pic {
+  margin: 0 auto;
+  position: relative;
+  display: flex;
+  justify-content: center;
+  width: 100vw;
+  height: 50%;
+}
+.pic {
+  background: url("./IMG3.JPG");
+  background-position: center;
+  background-size: cover;
+  position: absolute;
+  bottom: 0;
+  border-radius: 50%;
+  width: 260px;
+  height: 260px;
+}
+
+.about-skills {
+  margin: 0 auto;
+  display: flex;
+  justify-content: center;
+  align-items: flex-end;
+  border-bottom: 0.1px solid white;
+  font-size: 380%;
+  font-family: "Open Sans Condensed", sans-serif;
+  font-weight: 300;
+  color: rgb(3, 194, 178);
+  width: 70vw;
+  height: 26%;
+}
+.skills {
+  font-family: "Open Sans Condensed", sans-serif;
+  text-align: center;
+
+  color: white;
+  width: 100vw;
+  height: 45%;
+}
+
+#expertise {
+  margin: 0 auto;
+  list-style: none;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  position: relative;
+  bottom: -4vh;
+  width: 60%;
+  height: 60%;
+}
+
+.skill {
+  margin: 0 2%;
   display: flex;
   justify-content: flex-start;
   align-items: center;
-  text-align: center;
-  font-size: 3vw;
-  font-weight: bold;
-  width: 90%;
-  height: 10%;
+
+  font-size: 140%;
+  font-weight: 500;
+  line-height: 6vh;
+  word-spacing: 0.05em;
+  width: 20%;
+  height: 20%;
+}
+.skill::before {
+  content: "•";
+  padding-right: 1vw;
 }
 
-.about-note {
-  font-size: 1.8vw;
-  width: 80%;
-  height: 70%;
-}
-
-
-.front>.c {
-  background: url("./components/pic3.jpg");
-  background-position: center;
-  background-size: cover;
-  display: flex;
-  justify-content: center;
-  height: 67vh;
-  margin-top: 21vh;
-}
-
-.card {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  background: rgb(247, 196, 31);
-  background-position: center;
-  background-size: cover;
-  width: 12vw;
-  height: 12vw;
+#work {
+  z-index: 1;
+  background: #d8fdf0;
   position: relative;
-  left: -20vw;
-  top: 5vw;
-  z-index: 3;
-  transform: rotate(-9deg);
+  width: 100vw;
+  height: 85vh;
 }
-
-.card:hover {
-  background: yellow;
-
-}
-
-.card:hover #card-explenation {
-  visibility: visible;
-
-}
-
-.card-shadow {
-  width: 11vw;
-  height: 10vw;
-  position: relative;
-  left: -32vw;
-  top: 6vw;
-  transform: rotate(-9deg);
-  z-index: 2;
-}
-
-.card-shadow::after {
-  content: '';
-  width: 9vw;
-  height: .5vw;
-  max-width: 20vw;
+.projects {
+  overflow: scroll;
+  margin: 0 auto;
   position: absolute;
-  z-index: -1;
-  top: 98%;
-  right: -1vw;
-  bottom: 15px;
-  left: auto;
-  box-shadow: 0 .8vw .8vw rgb(17, 17, 17);
-  transform: rotate(5deg);
+  top: 7vh;
+  left: 10vw;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  align-items: center;
+  width: 80vw;
+  height: 80vh;
 }
 
-.card-content {
+.projects > div {
+  background-color: #f1f1f1;
+
+  overflow: hidden;
   position: relative;
-  width: 100%;
-  height: 100%;
-  left: 0;
+  border-radius: 50%;
+  box-shadow: 2px 2px 2px rgba(0, 0, 0, 0.096);
+
+  text-align: center;
+
+  font-size: 30px;
+  width: 220px;
+  height: 220px;
+}
+
+.first-name {
+  background: #F3B5A0;
+  position: absolute;
   top: 0;
-  
-}
-
-.project-name {
-  margin: 0 auto;
-  color: #33322B;
-  font-family: 'Thasadith', sans-serif;
-  font-size: 3vw;
+  -webkit-transition: 0.7s;
+  -moz-transition: 0.7s;
+  transition: 0.7s;
+  -webkit-transition-timing-function: linear;
+  -moz-transition-timing-function: linear;
+  transition-timing-function: linear;
   display: flex;
+
   justify-content: center;
   align-items: center;
-  width: 100%;
-  height: 100%;
-
+  font-size: 220%;
+  font-family: "Expletus Sans", cursive;
+  color: white;
+  width: 220px;
+  height: 220px;
 }
-
-#card-explenation {
-  padding: 1vh;
+.first-description {
+  background: #190e41;
+  padding: 4px;
   position: absolute;
-  left: -4vw;
-  top: 25vh;
-  visibility: hidden;
-  margin: 0 auto;
-  color: #33322B;
-  background: rgba(255, 255, 0, 0.651);
-  box-shadow: 0 .8vw .8vw rgb(173, 172, 172);
-  font-family: 'Thasadith', sans-serif;
+  top: 220px;
+  -webkit-transition: 0.7s;
+  -moz-transition: 0.7s;
+  transition: 0.7s;
+  -webkit-transition-timing-function: linear;
+  -moz-transition-timing-function: linear;
+  transition-timing-function: linear;
+  display: flex;
+
+  justify-content: center;
+  align-items: center;
+  color: #f88c83;
+  font-size: 50%;
+  width: 216px;
+  height: 234px;
+}
+.second .name {
+  background: #190e41d8;
+  position: absolute;
+  top: 0;
+  display: flex;
+
+  justify-content: center;
+  align-items: center;
+  -webkit-transition: 0.7s;
+  -moz-transition: 0.7s;
+  transition: 0.7s;
+  -webkit-transition-timing-function: linear;
+  -moz-transition-timing-function: linear;
+  transition-timing-function: linear;
+  width: 220px;
+  height: 220px;
+}
+.second .description {
+  background: #f7766ade;;
+
+  position: absolute;
+  top: 220px;
+  -webkit-transition: 0.7s;
+  -moz-transition: 0.7s;
+  transition: 0.7s;
+  -webkit-transition-timing-function: linear;
+  -moz-transition-timing-function: linear;
+  transition-timing-function: linear;
+  width: 220px;
+  height: 220px;
+}
+.third .name {
+  background: #b6ebda;
+  position: absolute;
+  top: 0;
+  -webkit-transition: 0.7s;
+  -moz-transition: 0.7s;
+  transition: 0.7s;
+  -webkit-transition-timing-function: linear;
+  -moz-transition-timing-function: linear;
+  transition-timing-function: linear;
+  width: 220px;
+  height: 220px;
+}
+.third .description {
+  background: #564fb8a8;
+  padding: 4px;
+  position: absolute;
+  top: 220px;
+  -webkit-transition: 0.7s;
+  -moz-transition: 0.7s;
+  transition: 0.7s;
+  -webkit-transition-timing-function: linear;
+  -moz-transition-timing-function: linear;
+  transition-timing-function: linear;
+  width: 232px;
+  height: 234px;
+}
+.forth .name {
+  background: #FFD6BA;
+  position: absolute;
+  top: 0;
+  -webkit-transition: 0.7s;
+  -moz-transition: 0.7s;
+  transition: 0.7s;
+  -webkit-transition-timing-function: linear;
+  -moz-transition-timing-function: linear;
+  transition-timing-function: linear;
+  width: 220px;
+  height: 220px;
+}
+.forth .description {
+  background: #a8cec1;
+  padding: 4px;
+  position: absolute;
+  top: 220px;
+  -webkit-transition: 0.7s;
+  -moz-transition: 0.7s;
+  transition: 0.7s;
+  -webkit-transition-timing-function: linear;
+  -moz-transition-timing-function: linear;
+  transition-timing-function: linear;
+  width: 232px;
+  height: 234px;
+}
+
+.dots {
   display: flex;
   justify-content: center;
   align-items: center;
+
+  margin: 0 auto;
+  color: white;
   text-align: center;
-  width: 30vw;
-  height:30vh;
+  height: 100%;
+  width: 100%;
 }
-
-
+.project:hover .description {
+  top: 0;
+}
+.project:hover .name {
+  top: -220px;
+}
+#contact {
+  background: #190e41;
+  width: 100vw;
+  height: 15vh;
+}
 .footer {
-  flex-direction: column;
-  padding: 2%;
   display: flex;
-  padding: 0 25% 0 25%;
-  align-items: center;
   justify-content: center;
-  font-family: 'Poiret One', cursive;
-  position: absolute;
-  top: 292%;
+  align-items: center;
+  flex-direction: column;
   box-sizing: border-box;
   height: 12%;
   width: 100%;
+  height: 100%;
 }
-
 .row1 {
+  margin-bottom: 0.5%;
   display: flex;
-  align-items: center;
   justify-content: space-between;
-  height: 90%;
-  width: 80%;
+  align-items: flex-end;
+  width: 28%;
+  height: 50%;
 }
-
 .row2 {
-
-  font-size: .7vw;
   display: flex;
-  align-items: center;
   justify-content: center;
-  height: 25%;
-  width: 100%;
-}
-
-a {
-  text-decoration: none;
-}
-
-.fa {
-  font-size: 3vh;
+  align-items: center;
+  font-family: "Open Sans Condensed", sans-serif;
+  font-size: 2vh;
   text-align: center;
-  line-height: 4vh;
-  margin: auto;
-  padding: 0;
-  border-radius: 50%;
-  border: none;
-  color: rgb(54, 54, 51);
-  height: 4.5vh;
-  width: 4.5vh;
-}
-
-
-
-.fa:hover {
-  background: #33322B;
   color: white;
+  width: 100%;
+  height: 35%;
 }
 
+.link {
+  background: white;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 50%;
+  font-size: 2vh;
+  text-decoration: none;
+  color: #190e41;
+  transition: all 0.2s ease-in-out;
+  width: 4vh;
+  height: 4vh;
+}
 
+.link:hover {
+  transform: scale(1.3);
+}
 
+.bounce {
+  margin: 0 auto;
+  cursor: pointer;
+  -webkit-animation: bounce 2s infinite;
+  animation: bounce 2s infinite;
+}
 
+@-webkit-keyframes bounce {
+  0%,
+  30%,
+  50% {
+    -webkit-transform: translateY(0);
+    transform: translateX(0);
+  }
+  40% {
+    -webkit-transform: translateY(-5px);
+    transform: translateY(-5px);
+  }
+  60% {
+    -webkit-transform: translateY(-5px);
+    transform: translateY(-5px);
+  }
+  80% {
+    -webkit-transform: translateY(-5px);
+    transform: translateY(-5px);
+  }
+}
 
-
-
-@media only screen and (min-width: 450px) and (max-width: 766px) {
-
-  .header {
-
-    height: 18.5%;
-
+@keyframes bounce {
+  0%,
+  30%,
+  50% {
+    transform: translateY(0);
+  }
+  40% {
+    transform: translateY(-5px);
+  }
+  60% {
+    transform: translateY(-5px);
   }
 
-  .logo {
-    width: 62%;
+  80% {
+    transform: translateY(-5px);
+  }
+}
+
+@-moz-keyframes bounce {
+  0%,
+  30%,
+  50% {
+    -ms-transform: translateY(0);
+    transform: translateY(0);
+  }
+  40% {
+    -ms-transform: translateY(-5px);
+    transform: translateY(-5px);
+  }
+  60% {
+    -ms-transform: translateY(-5px);
+    transform: translateY(-5px);
+  }
+  80% {
+    -ms-transform: translateY(-5px);
+    transform: translateY(-5px);
+  }
+}
+
+#a,
+#b,
+#c {
+  display: inline-block;
+  font-size: 5vw;
+  -webkit-animation: dbounce 1.5s infinite;
+  animation: dbounce 1.5s infinite;
+}
+
+@-webkit-keyframes dbounce {
+  0% {
+    transform: translateY(0);
+  }
+  25% {
+    transform: translateY(-2px);
+  }
+  50% {
+    transform: translateY(-4px);
+  }
+  75% {
+    transform: translateY(-2px);
   }
 
-  .about {
-    padding: 0 2% 0 2%;
-    font-size: 2.8vw;
+  100% {
+    transform: translateY(0);
+  }
+}
+
+@keyframes dbounce {
+  0% {
+    transform: translateY(0);
+  }
+  25% {
+    transform: translateY(-2px);
+  }
+  50% {
+    transform: translateY(-4px);
+  }
+  75% {
+    transform: translateY(-2px);
   }
 
-  .about-note {
-    font-size: 3vw;
+  100% {
+    transform: translateY(0);
+  }
+}
+
+@-moz-keyframes dbounce {
+  0% {
+    transform: translateY(0);
+  }
+  25% {
+    transform: translateY(-2px);
+  }
+  50% {
+    transform: translateY(-4px);
+  }
+  75% {
+    transform: translateY(-2px);
+  }
+
+  100% {
+    transform: translateY(0);
+  }
+}
+
+#b:nth-child(2) {
+  animation-delay: 0.2s;
+}
+#c:nth-child(3) {
+  animation-delay: 0.3s;
+}
+@media only screen and (min-width: 1151px) and (max-width: 1200px) {
+  .projects {
+    top: 6vh;
+    left: 2vw;
+    width: 90%;
+    height: 90%;
+  }
+}
+@media only screen and (min-width: 950px) and (max-width: 1100px) {
+  #nav-zone {
+    position: absolute;
+    width: 10vw;
+  }
+  li div {
+    font-size: 6vw;
+    line-height: 6vw;
+  }
+  #expertise {
+    width: 60%;
+  }
+  .projects {
+left:2vw;
+    top: 6vh;
+    width: 90%;
+    height: 90%;
+  }
+  .projects > div {
+    margin: 1.7vh auto 0 auto;
+    font-size: 20px;
+    width: 200px;
+    height: 200px;
+  }
+  .first-name {
+    width: 200px;
+    height: 200px;
+  }
+  .first-description {
+    padding: 1px;
+    top: 200px;
+    width: 200px;
+    height: 200px;
+  }
+  .second .name {
+    width: 200px;
+    height: 200px;
+  }
+  .second .description {
+    padding: 1px;
+    top: 200px;
+    width: 200px;
+    height: 200px;
+  }
+  .third .name {
+    width: 200px;
+    height: 200px;
+  }
+  .third .description {
+    padding: 1px;
+    top: 200px;
+    width: 200px;
+    height: 200px;
+  }
+  .forth .name {
+    width: 200px;
+    height: 200px;
+  }
+  .forth .description {
+    padding: 1px;
+    top: 200px;
+    width: 200px;
+    height: 200px;
+  }
+
+  .project:hover .name {
+    top: -200px;
+  }
+}
+
+@media only screen and (min-width: 820px) and (max-width: 949px) {
+  #nav-zone {
+    position: absolute;
+    width: 10vw;
+  }
+  li div {
+    font-size: 6vw;
+    line-height: 6vw;
+  }
+  
+  #expertise {
+    width: 60%;
+  }
+  .projects {
+   
+    top: 12vh;
+    width: 75%;
+    height: 80%;
+  }
+  .projects > div {
+    font-size: 30px;
+    width: 240px;
+    height: 240px;
+  }
+
+  .first-name {
+    width: 240px;
+    height: 240px;
+  }
+  .first-description {
+    padding: 1px;
+    top: 240px;
+    width: 240px;
+    height: 240px;
+  }
+  .second .name {
+    width: 240px;
+    height: 240px;
+  }
+  .second .description {
+    top: 240px;
+    width: 240px;
+    height: 240px;
+  }
+  .third .name {
+    width: 240px;
+    height: 240px;
+  }
+  .third .description {
+    top: 240px;
+    width: 240px;
+    height: 240px;
+  }
+  .forth .name {
+    width: 240px;
+    height: 240px;
+  }
+  .forth .description {
+    top: 240px;
+    width: 240px;
+    height: 240px;
+  }
+
+  .project:hover .name {
+    top: -240px;
+  }
+  .row1 {
+    margin-bottom: 2.5%;
+    width: 60%;
+    height: 40%;
+  }
+  .row2 {
+    font-size: 1.5vh;
+  }
+}
+@media only screen and (min-width: 661px) and (max-width: 819px) {
+  #nav-zone {
+    position: absolute;
+    width: 10vw;
+  }
+  li div {
+    font-size: 7vw;
+    line-height: 7vw;
+  }
+}
+@media only screen and (max-width: 660px) {
+  #nav-zone {
+    margin: 0 auto;
+    position: absolute;
+    top: 100%;
+    right: 0;
+    width: 100vw;
+    height: 170vh;
+  }
+  #navbar {
+   
+ 
+    z-index: 2;
+    background: #f88479de;
+    opacity: .8;
+    margin: 0;
+    padding: 0;
+    
+    position: -webkit-sticky; /* Safari */
+    position: sticky;
+    top: 0;
+    list-style-type: none;
+    width: 100vw;
+    height: 8vh;
+  }
+
+#active{
+
+  opacity: 1;
+}
+
+  .classA {
+    position: absolute;
+    right:0;
+    opacity: 0;
+    color:#b7ecdb;
+    margin: 0 ;
+    font-size: 5vh;
+    font-weight: 700;
+    letter-spacing: 0.04em;
+    line-height: 8vh;
+    writing-mode: horizontal-tb;
+    text-align: center;
+ width: 100vw;
+  }
+
+  .classP {
+    opacity: 0;
+    background: #190e41;
+    position: absolute;
+    right:0;
+    color:#a3dbc9;
+    margin: 0 ;
+    font-size: 5vh;
+    font-weight: 700;
+    letter-spacing: 0.04em;
+    line-height: 8vh;
+    writing-mode: horizontal-tb;
+    text-align: center;
+    width: 100vw;
+  }
+
+
+  #expertise {
+    width: 60%;
+  }
+  .skill {
+    margin: 0 10%;
+    width: 20%;
+  }
+  .projects {
+    top: 14vh;
     width: 80%;
-    height: 70%;
+    height: 80%;
+  }
+  .projects > div {
+    margin: 1.8vh auto 0 auto;
+    font-size: 20px;
+    width: 180px;
+    height: 180px;
+  }
+  .first-name {
+    width: 180px;
+    height: 180px;
+  }
+  .first-description {
+    padding: 1px;
+    top: 180px;
+    width: 180px;
+    height: 180px;
+  }
+  .second .name {
+    width: 180px;
+    height: 180px;
+  }
+  .second .description {
+    padding: 1px;
+    top: 180px;
+    width: 180px;
+    height: 180px;
+  }
+  .third .name {
+    width: 180px;
+    height: 180px;
+  }
+  .third .description {
+    padding: 1px;
+    top: 180px;
+    width: 180px;
+    height: 180px;
+  }
+  .forth .name {
+    width: 180px;
+    height: 180px;
+  }
+  .forth .description {
+    padding: 1px;
+    top: 180px;
+    width: 180px;
+    height: 180px;
   }
 
-  .work {
-    padding-left: 2%;
-    border-left: .2px solid #E8BF48;
-    font-size: 2.8vw;
-  }
-
-
-
-  .footer {
-    background: white;
+  .project:hover .name {
+    top: -180px;
   }
 
   .row1 {
-    justify-content: space-between;
+    margin-bottom: 2.5%;
+    width: 60%;
+    height: 40%;
+  }
+  .row2 {
+    font-size: 1.5vh;
+  }
+}
+
+@media only screen and (min-width: 1024px) and (max-width: 1024px) and (orientation: portrait) and (-webkit-min-device-pixel-ratio: 2) {
+  h1 {
+    font-size: 600%;
+  }
+
+  .about-title {
+    font-size: 550%;
+    width: 80vw;
+  }
+  .about-content {
+    padding: 2.5%;
+    font-size: 250%;
+    width: 70vw;
+    height: 35vh;
+  }
+  .about-skills {
+    font-size: 480%;
+  }
+  #work {
+  }
+
+  .skill {
+    font-size: 200%;
+    height: 30%;
+  }
+  .pic {
+    width: 380px;
+    height: 380px;
+  }
+  .projects > div {
+    font-size: 40px;
+    width: 340px;
+    height: 340px;
+  }
+
+  .first-name {
+    width: 340px;
+    height: 340px;
+  }
+  .first-description {
+    padding: 1px;
+    top: 340px;
+    width: 340px;
+    height: 340px;
+  }
+  .second .name {
+    width: 340px;
+    height: 340px;
+  }
+  .second .description {
+    top: 340px;
+    width: 340px;
+    height: 340px;
+  }
+  .third .name {
+    width: 340px;
+    height: 340px;
+  }
+  .third .description {
+    top: 340px;
+    width: 340px;
+    height: 340px;
+  }
+  .forth .name {
+    width: 340px;
+    height: 340px;
+  }
+  .forth .description {
+    top: 340px;
+    width: 340px;
+    height: 340px;
+  }
+
+  .project:hover .name {
+    top: -340px;
+  }
+  .row1 {
+    margin-bottom: 2.5%;
+    width: 40%;
+    height: 40%;
+  }
+  .row2 {
+    font-size: 1.5vh;
+  }
+}
+
+@media only screen and (min-width: 1366px) and (max-width: 1366px) and (orientation: landscape) and (-webkit-min-device-pixel-ratio: 2) {
+  h1 {
+    font-size: 600%;
+  }
+
+  .projects {
+    overflow: scroll;
+    margin: 0 auto;
+    position: absolute;
+    top: 2vh;
+    left: 10vw;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    align-items: center;
+    width: 60vw;
+    height: 80vh;
+  }
+  .projects > div {
+    font-size: 30px;
+    width: 300px;
+    height: 300px;
+  }
+
+  .first-name {
+    width: 300px;
+    height: 300px;
+  }
+  .first-description {
+    padding: 1px;
+    top: 300px;
+    width: 300px;
+    height: 300px;
+  }
+  .second .name {
+    width: 300px;
+    height: 300px;
+  }
+  .second .description {
+    padding: 1px;
+    top: 300px;
+    width: 300px;
+    height: 300px;
+  }
+  .third .name {
+    width: 300px;
+    height: 300px;
+  }
+  .third .description {
+    padding: 1px;
+    top: 300px;
+    width: 300px;
+    height: 300px;
+  }
+  .forth .name {
+    width: 300px;
+    height: 300px;
+  }
+  .forth .description {
+    padding: 1px;
+    top: 300px;
+    width: 300px;
+    height: 300px;
+  }
+
+  .project:hover .name {
+    top: -300px;
+  }
+  .row1 {
+    margin-bottom: 2.5%;
+    width: 40%;
+    height: 40%;
+  }
+  .row2 {
+    font-size: 1.5vh;
+  }
+}
+
+@media only screen and (min-width: 375px) and (max-width: 375px) and (orientation: portrait) {
+  h1 {
+    font-size: 400%;
+    width: 75vw;
+  }
+  h2 {
+    font-size: 140%;
+  }
+  .pic {
+    width: 220px;
+    height: 220px;
+  }
+  .about-title {
+    font-size: 330%;
     width: 90vw;
   }
 
-  .github,
-  .linkedin,
-  .email,
-  .codepen {
-    margin-left: 0;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    align-items: center;
+  .about-content {
+    padding: 2.5%;
+    font-size: 130%;
+    width: 80vw;
+    height: 35vh;
+  }
+  .about-skills {
+    font-size: 300%;
+  }
+  #expertise {
+    width: 100%;
+  }
+  .skill {
+    margin: 0 10%;
+
+    font-size: 140%;
+  }
+  .projects {
+    top: 6vh;
+    left: 0;
+    width: 100%;
+  }
+  .projects > div {
+    margin: 1.7vh auto 0 auto;
+    font-size: 20px;
+    width: 140px;
+    height: 140px;
+  }
+  .first-name {
+    width: 140px;
+    height: 140px;
+  }
+  .first-description {
+    padding: 1px;
+    top: 140px;
+    width: 140px;
+    height: 140px;
+  }
+  .second .name {
+    width: 140px;
+    height: 140px;
+  }
+  .second .description {
+    padding: 1px;
+    top: 140px;
+    width: 140px;
+    height: 140px;
+  }
+  .third .name {
+    width: 140px;
+    height: 140px;
+  }
+  .third .description {
+    padding: 1px;
+    top: 140px;
+    width: 140px;
+    height: 140px;
+  }
+  .forth .name {
+    width: 140px;
+    height: 140px;
+  }
+  .forth .description {
+    padding: 1px;
+    top: 140px;
+    width: 140px;
+    height: 140px;
   }
 
-  #card-explenation {
-
-    position: absolute;
-    left: -13vw;
-    top: 25vw;
-    color: rgb(24, 23, 20);
-    background: rgba(255, 255, 0, 0.9);
-    width: 60vw;
-    height: 40vw;
-  }
-
-}
-
-@media only screen and (min-width: 320px) and (max-width: 451px) {
-
-  .header {
-    height: 18.5%;
-
-  }
-
-  .logo {
-    width: 62%;
-  }
-
-  .about {
-    padding: 0 2% 0 2%;
-    font-size: 2.8vw;
-  }
-
-  .about-note {
-    font-size: 3vw;
-    width: 80%;
-    height: 70%;
-  }
-
-  .work {
-    padding-left: 2%;
-    border-left: .2px solid #E8BF48;
-    font-size: 2.8vw;
-  }
-
-
-  .front>.b {
-    margin-top: 19vh;
-    height: 76vh;
-  }
-
-  .front>.c {
-    margin-top: 14vh;
-    height: 74vh;
-  }
-
-  .footer {
-    background: white;
-    top: 306%;
-
+  .project:hover .name {
+    top: -140px;
   }
 
   .row1 {
-    justify-content: space-between;
+    margin-bottom: 1%;
+    width: 40%;
+    height: 50%;
+  }
+  .link {
+    width: 4.5vh;
+    height: 4.5vh;
+  }
+  .row2 {
+    font-size: 2vh;
+  }
+}
+@media only screen and (min-width: 812px) and (max-width: 812px) and (orientation: landscape) and (-webkit-device-pixel-ratio: 3) {
+  .pic {
+    width: 120px;
+    height: 120px;
+  }
+  .about-title {
+    font-size: 300%;
+    width: 80vw;
+  }
+
+  .about-content {
+    padding: 2.5%;
+    font-size: 130%;
+    width: 70vw;
+    height: 35vh;
+  }
+  .about-skills {
+    font-size: 250%;
+  }
+
+  .skill {
+    margin: 0 10%;
+
+    font-size: 120%;
+  }
+  .projects {
+    top: 10vh;
+    height: 85%;
+  }
+  .projects > div {
+    margin: 1.7vh auto 0 auto;
+    font-size: 20px;
+    width: 160px;
+    height: 160px;
+  }
+  .first-name {
+    width: 160px;
+    height: 160px;
+  }
+  .first-description {
+    padding: 1px;
+    top: 160px;
+    width: 160px;
+    height: 160px;
+  }
+  .second .name {
+    width: 160px;
+    height: 160px;
+  }
+  .second .description {
+    padding: 1px;
+    top: 160px;
+    width: 160px;
+    height: 160px;
+  }
+  .third .name {
+    width: 160px;
+    height: 160px;
+  }
+  .third .description {
+    padding: 1px;
+    top: 160px;
+    width: 160px;
+    height: 160px;
+  }
+  .forth .name {
+    width: 160px;
+    height: 160px;
+  }
+  .forth .description {
+    padding: 1px;
+    top: 160px;
+    width: 160px;
+    height: 160px;
+  }
+
+  .project:hover .name {
+    top: -160px;
+  }
+
+  .row1 {
+    margin-bottom: 1%;
+    width: 40%;
+    height: 50%;
+  }
+  .link {
+    width: 4.5vh;
+    height: 4.5vh;
+  }
+  .row2 {
+    font-size: 2vh;
+  }
+}
+@media only screen and (min-width: 411px) and (max-width: 411px) and (orientation: portrait) {
+  h1 {
+    font-size: 400%;
+    width: 75vw;
+  }
+  h2 {
+    font-size: 140%;
+  }
+  .pic {
+    width: 220px;
+    height: 220px;
+  }
+  .about-title {
+    font-size: 330%;
     width: 90vw;
   }
 
-  #github,
-  #linkedin,
-  #email,
-  #codepen {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    align-items: center;
+  .about-content {
+    padding: 2.5%;
+    font-size: 130%;
+    width: 80vw;
+    height: 35vh;
   }
-
-  #card-explenation {
-    position: absolute;
-    left: -5vw;
-    top: 30vw;
-    color: rgb(24, 23, 20);
-    background: rgba(255, 255, 0, 0.9);
-    width: 60vw;
-    height: 40vw;
+  .about-skills {
+    font-size: 300%;
   }
+  #expertise {
+    width: 100%;
+  }
+  .skill {
+    margin: 0 10%;
 
-}
-
-@media only screen and (min-height: 360px) and (max-height: 555px) {
-
-  .about-note {
-    font-size: 1.8vw;
-    width: 80%;
+    font-size: 140%;
+  }
+  .projects {
+    top: 10vh;
+    left: 0;
+    width: 100%;
     height: 70%;
   }
-}
-
-@media only screen and (max-height: 359px) {
-  .App {
-    display: none;
+  .projects > div {
+    margin: 1.7vh auto 0 auto;
+    font-size: 20px;
+    width: 160px;
+    height: 160px;
+  }
+  .first-name {
+    width: 160px;
+    height: 160px;
+  }
+  .first-description {
+    padding: 1px;
+    top: 160px;
+    width: 160px;
+    height: 160px;
+  }
+  .second .name {
+    width: 160px;
+    height: 160px;
+  }
+  .second .description {
+    padding: 1px;
+    top: 160px;
+    width: 160px;
+    height: 160px;
+  }
+  .third .name {
+    width: 160px;
+    height: 160px;
+  }
+  .third .description {
+    padding: 1px;
+    top: 160px;
+    width: 160px;
+    height: 160px;
+  }
+  .forth .name {
+    width: 160px;
+    height: 160px;
+  }
+  .forth .description {
+    padding: 1px;
+    top: 160px;
+    width: 160px;
+    height: 160px;
   }
 
+  .project:hover .name {
+    top: -160px;
+  }
+  .row1 {
+    margin-bottom: 1%;
+    width: 60%;
+    height: 50%;
+  }
+  .link {
+    width: 4.5vh;
+    height: 4.5vh;
+  }
+  .row2 {
+    font-size: 1.5vh;
+  }
+}
+@media only screen and (min-width: 414px) and (max-width: 414px) and (orientation: portrait) {
+  h1 {
+    font-size: 400%;
+    width: 75vw;
+  }
+  h2 {
+    font-size: 140%;
+  }
+  .pic {
+    width: 220px;
+    height: 220px;
+  }
+  .about-title {
+    font-size: 330%;
+    width: 90vw;
+  }
+
+  .about-content {
+    padding: 2.5%;
+    font-size: 130%;
+    width: 80vw;
+    height: 35vh;
+  }
+  .about-skills {
+    font-size: 300%;
+  }
+  #expertise {
+    width: 100%;
+  }
+  .skill {
+    margin: 0 10%;
+
+    font-size: 140%;
+  }
+  .projects {
+    top: 10vh;
+    left: 0;
+    width: 100%;
+    height: 70%;
+  }
+  .projects > div {
+    margin: 1.7vh auto 0 auto;
+    font-size: 20px;
+    width: 160px;
+    height: 160px;
+  }
+  .first-name {
+    width: 160px;
+    height: 160px;
+  }
+  .first-description {
+    padding: 1px;
+    top: 160px;
+    width: 160px;
+    height: 160px;
+  }
+  .second .name {
+    width: 160px;
+    height: 160px;
+  }
+  .second .description {
+    padding: 1px;
+    top: 160px;
+    width: 160px;
+    height: 160px;
+  }
+  .third .name {
+    width: 160px;
+    height: 160px;
+  }
+  .third .description {
+    padding: 1px;
+    top: 160px;
+    width: 160px;
+    height: 160px;
+  }
+  .forth .name {
+    width: 160px;
+    height: 160px;
+  }
+  .forth .description {
+    padding: 1px;
+    top: 160px;
+    width: 160px;
+    height: 160px;
+  }
+
+  .project:hover .name {
+    top: -160px;
+  }
+  .row1 {
+    margin-bottom: 1%;
+    width: 40%;
+    height: 50%;
+  }
+  .link {
+    width: 4.5vh;
+    height: 4.5vh;
+  }
+  .row2 {
+    font-size: 2vh;
+  }
+}
+
+@media only screen and (min-width: 736px) and (max-width: 736px) and (orientation: landscape) and (-webkit-device-pixel-ratio: 3) {
+  .pic {
+    width: 130px;
+    height: 130px;
+  }
+  h1 {
+    font-size: 400%;
+    width: 75vw;
+  }
+  h2 {
+    font-size: 140%;
+  }
+  .about-title {
+    width: 90vw;
+    font-size: 300%;
+  }
+
+  .about-content {
+    padding: 2.5%;
+    font-size: 130%;
+    width: 80vw;
+    height: 60vh;
+  }
+
+  .projects > div {
+    margin: 1.7vh auto 0 auto;
+    font-size: 10px;
+    width: 110px;
+    height: 110px;
+  }
+  .first-name {
+    width: 110px;
+    height: 110px;
+  }
+  .first-description {
+    padding: 1px;
+    top: 110px;
+    width: 110px;
+    height: 110px;
+  }
+  .second .name {
+    width: 110px;
+    height: 110px;
+  }
+  .second .description {
+    padding: 1px;
+    top: 110px;
+    width: 110px;
+    height: 110px;
+  }
+  .third .name {
+    width: 110px;
+    height: 110px;
+  }
+  .third .description {
+    padding: 1px;
+    top: 110px;
+    width: 110px;
+    height: 110px;
+  }
+  .forth .name {
+    width: 110px;
+    height: 110px;
+  }
+  .forth .description {
+    padding: 1px;
+    top: 110px;
+    width: 110px;
+    height: 110px;
+  }
+
+  .project:hover .name {
+    top: -110px;
+  }
+
+  .row1 {
+    margin-bottom: 1%;
+    width: 40%;
+    height: 50%;
+  }
+  .link {
+    width: 4.5vh;
+    height: 4.5vh;
+  }
+  .row2 {
+    font-size: 2vh;
+  }
+}
+
+@media only screen and (min-width: 667px) and (max-width: 667px) and (orientation: landscape) {
+  h1 {
+    font-size: 400%;
+    width: 75vw;
+  }
+  h2 {
+    font-size: 140%;
+  }
+  .pic {
+    width: 130px;
+    height: 130px;
+  }
+  h1 {
+    font-size: 400%;
+    width: 75vw;
+  }
+  h2 {
+    font-size: 140%;
+  }
+  .about-title {
+    width: 90vw;
+    font-size: 300%;
+  }
+
+  .about-content {
+    padding: 2.5%;
+    font-size: 130%;
+    width: 80vw;
+    height: 60vh;
+  }
+
+  .projects > div {
+    margin: 1.7vh auto 0 auto;
+    font-size: 10px;
+    width: 110px;
+    height: 110px;
+  }
+  .first-name {
+    width: 110px;
+    height: 110px;
+  }
+  .first-description {
+    padding: 1px;
+    top: 110px;
+    width: 110px;
+    height: 110px;
+  }
+  .second .name {
+    width: 110px;
+    height: 110px;
+  }
+  .second .description {
+    padding: 1px;
+    top: 110px;
+    width: 110px;
+    height: 110px;
+  }
+  .third .name {
+    width: 110px;
+    height: 110px;
+  }
+  .third .description {
+    padding: 1px;
+    top: 110px;
+    width: 110px;
+    height: 110px;
+  }
+  .forth .name {
+    width: 110px;
+    height: 110px;
+  }
+  .forth .description {
+    padding: 1px;
+    top: 110px;
+    width: 110px;
+    height: 110px;
+  }
+
+  .project:hover .name {
+    top: -110px;
+  }
+
+  .row1 {
+    margin-bottom: 1%;
+    width: 40%;
+    height: 50%;
+  }
+  .link {
+    width: 4.5vh;
+    height: 4.5vh;
+  }
+  .row2 {
+    font-size: 2vh;
+  }
+}
+@media only screen and (min-width: 320px) and (max-width: 320px) and (orientation: portrait) {
+  h1 {
+    font-size: 380%;
+    width: 80vw;
+  }
+  h2 {
+    font-size: 140%;
+  }
+  .about-title {
+    width: 80vw;
+    font-size: 300%;
+  }
+
+  .about-content {
+    padding: 2.5%;
+    font-size: 130%;
+    width: 75vw;
+    height: 60vh;
+  }
+  .pic {
+    width: 180px;
+    height: 180px;
+  }
+  .about-skills {
+    font-size: 300%;
+  }
+  #expertise {
+    width: 100%;
+  }
+  .skill {
+    margin: 0 10%;
+
+    font-size: 140%;
+  }
+  .projects > div {
+    margin: 1.7vh auto 0 auto;
+    font-size: 10px;
+    width: 110px;
+    height: 110px;
+  }
+  .first-name {
+    width: 110px;
+    height: 110px;
+  }
+  .first-description {
+    padding: 1px;
+    top: 110px;
+    width: 110px;
+    height: 110px;
+  }
+  .second .name {
+    width: 110px;
+    height: 110px;
+  }
+  .second .description {
+    padding: 1px;
+    top: 110px;
+    width: 110px;
+    height: 110px;
+  }
+  .third .name {
+    width: 110px;
+    height: 110px;
+  }
+  .third .description {
+    padding: 1px;
+    top: 110px;
+    width: 110px;
+    height: 110px;
+  }
+  .forth .name {
+    width: 110px;
+    height: 110px;
+  }
+  .forth .description {
+    padding: 1px;
+    top: 110px;
+    width: 110px;
+    height: 110px;
+  }
+
+  .project:hover .name {
+    top: -110px;
+  }
+
+  .row1 {
+    margin-bottom: 1%;
+    width: 50%;
+    height: 50%;
+  }
+  .link {
+    width: 4.5vh;
+    height: 4.5vh;
+  }
+  .row2 {
+    font-size: 2vh;
+  }
+}
+
+@media only screen and (min-width: 568px) and (max-width: 568px) and (orientation: landscape) {
+  h1 {
+    font-size: 400%;
+    width: 75vw;
+  }
+  h2 {
+    font-size: 140%;
+  }
+  .pic {
+    width: 120px;
+    height: 120px;
+  }
+  .about-skills {
+    height: 30%;
+    font-size: 240%;
+  }
+  .skills {
+    font-family: "Open Sans Condensed", sans-serif;
+    text-align: center;
+
+    color: white;
+    width: 100vw;
+    height: 30%;
+  }
+  .about-title {
+    width: 90vw;
+    font-size: 280%;
+  }
+
+  .about-content {
+    padding: 2.5%;
+    font-size: 100%;
+    width: 80vw;
+    height: 60vh;
+  }
+  .about-pic {
+    height: 60%;
+  }
+  #expertise {
+    width: 100%;
+    height: 80%;
+  }
+  .skill {
+    margin: 0 10%;
+
+    font-size: 100%;
+  }
+  .projects > div {
+    margin: 1.7vh auto 0 auto;
+    font-size: 10px;
+    width: 110px;
+    height: 110px;
+  }
+  .first-name {
+    width: 110px;
+    height: 110px;
+  }
+  .first-description {
+    padding: 1px;
+    top: 110px;
+    width: 110px;
+    height: 110px;
+  }
+  .second .name {
+    width: 110px;
+    height: 110px;
+  }
+  .second .description {
+    padding: 1px;
+    top: 110px;
+    width: 110px;
+    height: 110px;
+  }
+  .third .name {
+    width: 110px;
+    height: 110px;
+  }
+  .third .description {
+    padding: 1px;
+    top: 110px;
+    width: 110px;
+    height: 110px;
+  }
+  .forth .name {
+    width: 110px;
+    height: 110px;
+  }
+  .forth .description {
+    padding: 1px;
+    top: 110px;
+    width: 110px;
+    height: 110px;
+  }
+
+  .project:hover .name {
+    top: -110px;
+  }
+
+  .row1 {
+    margin-bottom: 1%;
+    width: 40%;
+    height: 50%;
+  }
+  .link {
+    width: 4.5vh;
+    height: 4.5vh;
+  }
+  .row2 {
+    font-size: 1.5vh;
+  }
+}
+@media only screen and (min-width: 823px) and (max-width: 823px) and (orientation: landscape) {
+  .pic {
+    width: 130px;
+    height: 130px;
+  }
+  h1 {
+    font-size: 400%;
+    width: 75vw;
+  }
+  h2 {
+    font-size: 140%;
+  }
+  .about-title {
+    width: 90vw;
+    font-size: 300%;
+  }
+
+  .about-content {
+    padding: 2.5%;
+    font-size: 130%;
+    width: 80vw;
+    height: 60vh;
+  }
+
+  .projects > div {
+    margin: 1.7vh auto 0 auto;
+    font-size: 10px;
+    width: 110px;
+    height: 110px;
+  }
+  .first-name {
+    width: 110px;
+    height: 110px;
+  }
+  .first-description {
+    padding: 1px;
+    top: 110px;
+    width: 110px;
+    height: 110px;
+  }
+  .second .name {
+    width: 110px;
+    height: 110px;
+  }
+  .second .description {
+    padding: 1px;
+    top: 110px;
+    width: 110px;
+    height: 110px;
+  }
+  .third .name {
+    width: 110px;
+    height: 110px;
+  }
+  .third .description {
+    padding: 1px;
+    top: 110px;
+    width: 110px;
+    height: 110px;
+  }
+  .forth .name {
+    width: 110px;
+    height: 110px;
+  }
+  .forth .description {
+    padding: 1px;
+    top: 110px;
+    width: 110px;
+    height: 110px;
+  }
+
+  .project:hover .name {
+    top: -110px;
+  }
+
+  .row1 {
+    margin-bottom: 1%;
+    width: 40%;
+    height: 50%;
+  }
+  .link {
+    width: 4.5vh;
+    height: 4.5vh;
+  }
+  .row2 {
+    font-size: 1.5vh;
+  }
+}
+@media only screen and (min-width: 360px) and (max-width: 360px) and (orientation: portrait) {
+  h1 {
+    font-size: 400%;
+    width: 75vw;
+  }
+  h2 {
+    font-size: 140%;
+  }
+  .about-title {
+    width: 80vw;
+    font-size: 300%;
+  }
+
+  .about-content {
+    padding: 2.5%;
+    font-size: 130%;
+    width: 75vw;
+    height: 60vh;
+  }
+  .pic {
+    width: 180px;
+    height: 180px;
+  }
+  .about-skills {
+    font-size: 300%;
+  }
+  #expertise {
+    width: 100%;
+  }
+  .skill {
+    margin: 0 10%;
+
+    font-size: 140%;
+  }
+  .projects {
+    top: 6vh;
+  }
+  .projects > div {
+    margin: 1.7vh auto 0 auto;
+    font-size: 20px;
+    width: 140px;
+    height: 140px;
+  }
+  .first-name {
+    width: 140px;
+    height: 140px;
+  }
+  .first-description {
+    padding: 1px;
+    top: 140px;
+    width: 140px;
+    height: 140px;
+  }
+  .second .name {
+    width: 140px;
+    height: 140px;
+  }
+  .second .description {
+    padding: 1px;
+    top: 140px;
+    width: 140px;
+    height: 140px;
+  }
+  .third .name {
+    width: 140px;
+    height: 140px;
+  }
+  .third .description {
+    padding: 1px;
+    top: 140px;
+    width: 140px;
+    height: 140px;
+  }
+  .forth .name {
+    width: 140px;
+    height: 140px;
+  }
+  .forth .description {
+    padding: 1px;
+    top: 140px;
+    width: 140px;
+    height: 140px;
+  }
+
+  .project:hover .name {
+    top: -140px;
+  }
+
+  .row1 {
+    margin-bottom: 1%;
+    width: 50%;
+    height: 50%;
+  }
+  .link {
+    width: 4.5vh;
+    height: 4.5vh;
+  }
+  .row2 {
+    font-size: 1.5vh;
+  }
+}
+
+@media only screen and (min-width: 640px) and (max-width: 640px) and (orientation: landscape) {
+  .pic {
+    width: 130px;
+    height: 130px;
+  }
+  h1 {
+    font-size: 400%;
+    width: 75vw;
+  }
+  h2 {
+    font-size: 140%;
+  }
+  .about-title {
+    width: 90vw;
+    font-size: 300%;
+  }
+
+  .about-content {
+    padding: 2.5%;
+    font-size: 130%;
+    width: 80vw;
+    height: 60vh;
+  }
+
+  .projects > div {
+    margin: 1.7vh auto 0 auto;
+    font-size: 10px;
+    width: 110px;
+    height: 110px;
+  }
+  .first-name {
+    width: 110px;
+    height: 110px;
+  }
+  .first-description {
+    padding: 1px;
+    top: 110px;
+    width: 110px;
+    height: 110px;
+  }
+  .second .name {
+    width: 110px;
+    height: 110px;
+  }
+  .second .description {
+    padding: 1px;
+    top: 110px;
+    width: 110px;
+    height: 110px;
+  }
+  .third .name {
+    width: 110px;
+    height: 110px;
+  }
+  .third .description {
+    padding: 1px;
+    top: 110px;
+    width: 110px;
+    height: 110px;
+  }
+  .forth .name {
+    width: 110px;
+    height: 110px;
+  }
+  .forth .description {
+    padding: 1px;
+    top: 110px;
+    width: 110px;
+    height: 110px;
+  }
+
+  .project:hover .name {
+    top: -110px;
+  }
+
+  .row1 {
+    margin-bottom: 1%;
+    width: 40%;
+    height: 50%;
+  }
+  .link {
+    width: 4.5vh;
+    height: 4.5vh;
+  }
+  .row2 {
+    font-size: 1.5;
+  }
 }
