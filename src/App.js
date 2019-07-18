@@ -1,3 +1,4 @@
+/* eslint-disable jsx-a11y/anchor-has-content */
 import React, { Component } from "react";
 import "./App.css";
 import Footer from "./components/Footer";
@@ -5,7 +6,9 @@ import Footer from "./components/Footer";
 class App extends Component {
   state = {
     idA: "active",
-    idP: ""
+    idP: "",
+    idName:"",
+    idDes:""
   };
   componentDidMount() {
     window.addEventListener("scroll", this.handleScroll);
@@ -30,7 +33,9 @@ class App extends Component {
    
     }
   };
-
+  nextPage = e => {
+    this.setState({ idName: "hoverN", idDes: "hoverD" });
+  };
   render() {
     return (
       <div className="App">
@@ -96,15 +101,34 @@ class App extends Component {
             </div>
 
             <div id="work">
-              <div class="projects">
-                <div className="first project">
-                  <div className="name first-name ">2SHOP</div>
-                  <div className="description first-description">
-                    This is an in progress project
+              <div className="projects">
+                <div 
+                
+                className="first project">
+                 
+                  <div 
+                  onClick={this.nextPage}
+                  id={this.state.idName}
+                  className="name first-name ">2SHOP</div>
+                  <div 
+                   id={this.state.idDes}
+                  className="description first-description">
+                  This is a simple one page App to make a shopping list. This project is in progress.
+
+                    <a
+                    id="app"
+                className="fa fa-caret-down bounce"
+                href="https://my2shoplist.herokuapp.com/"
+                style={{ fontSize: "200%" }}
+              />
                   </div>
+                
+       
                 </div>
                 <div className="second project">
-                  <div className="name  ">
+                  <div 
+                  onClick={this.nextPage}
+                  className="name  ">
                   <div className="dots">
                       <div id="a" className="dbounce">
                         .
@@ -120,7 +144,10 @@ class App extends Component {
                   <div className="description " />
                 </div>
                 <div className="third project">
-                  <div className="name  " >
+                  
+                  <div 
+                  onClick={this.nextPage}
+                  className="name  " >
                   <div className="dots">
                       <div id="a" className="dbounce">
                         .
@@ -135,8 +162,11 @@ class App extends Component {
 </div>
                   <div className="description " />
                 </div>
-                <div className="forth project">
-                  <div className="name  " >
+                <div className="forth project"
+                onClick={e=>this.nextPage(e)}>
+                  <div 
+                  
+                  className="name  " >
                   <div className="dots">
                       <div id="a" className="dbounce">
                         .

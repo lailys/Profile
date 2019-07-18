@@ -9,7 +9,9 @@ body {
   height: 100vh;
   width: 100vw;
 }
-
+a{
+  text-decoration: none;
+}
 .page {
   z-index: 1;
 
@@ -232,6 +234,9 @@ li div {
   width: 100vw;
   height: 85vh;
 }
+
+
+
 .projects {
   overflow: scroll;
   margin: 0 auto;
@@ -251,6 +256,7 @@ li div {
 
   overflow: hidden;
   position: relative;
+
   border-radius: 50%;
   box-shadow: 2px 2px 2px rgba(0, 0, 0, 0.096);
 
@@ -283,6 +289,7 @@ li div {
 }
 .first-description {
   background: #190e41;
+  overflow-y: scroll;
   padding: 4px;
   position: absolute;
   top: 220px;
@@ -293,13 +300,19 @@ li div {
   -moz-transition-timing-function: linear;
   transition-timing-function: linear;
   display: flex;
-
+flex-direction: column;
   justify-content: center;
   align-items: center;
   color: #f88c83;
   font-size: 50%;
   width: 216px;
   height: 234px;
+}
+#app{
+  color:#fc3623;
+}
+#app:hover{
+color: rgb(8, 240, 220);
 }
 .second .name {
   background: #190e41d8;
@@ -402,6 +415,12 @@ li div {
   top: 0;
 }
 .project:hover .name {
+  top: -220px;
+}
+.project:active .description {
+  top: 0;
+}
+.project:active .name {
   top: -220px;
 }
 #contact {
@@ -740,6 +759,10 @@ left:2vw;
   .project:hover .name {
     top: -240px;
   }
+
+  .project:active .name {
+    top: -240px;
+  }
   .row1 {
     margin-bottom: 2.5%;
     width: 60%;
@@ -884,7 +907,9 @@ left:2vw;
   .project:hover .name {
     top: -180px;
   }
-
+  .project:active .name {
+    top: -180px;
+  }
   .row1 {
     margin-bottom: 2.5%;
     width: 60%;
@@ -971,6 +996,9 @@ left:2vw;
   .project:hover .name {
     top: -340px;
   }
+  .project:active .name {
+    top: -340px;
+  }
   .row1 {
     margin-bottom: 2.5%;
     width: 40%;
@@ -1047,6 +1075,9 @@ left:2vw;
   }
 
   .project:hover .name {
+    top: -300px;
+  }
+  .project:active .name {
     top: -300px;
   }
   .row1 {
@@ -1146,6 +1177,9 @@ left:2vw;
   }
 
   .project:hover .name {
+    top: -140px;
+  }
+  .project:active .name {
     top: -140px;
   }
 
@@ -1258,6 +1292,9 @@ left:2vw;
   .project:hover .name {
     top: -160px;
   }
+  .project:active .name {
+    top: -160px;
+  }
 
   .row1 {
     margin-bottom: 1%;
@@ -1360,6 +1397,9 @@ left:2vw;
   }
 
   .project:hover .name {
+    top: -160px;
+  }
+  .project:active .name {
     top: -160px;
   }
   .row1 {
@@ -1465,6 +1505,9 @@ left:2vw;
   .project:hover .name {
     top: -160px;
   }
+  .project:active .name {
+    top: -160px;
+  }
   .row1 {
     margin-bottom: 1%;
     width: 40%;
@@ -1564,6 +1607,9 @@ left:2vw;
   }
 
   .project:hover .name {
+    top: -110px;
+  }
+  .project:active .name {
     top: -110px;
   }
 
@@ -1686,6 +1732,9 @@ left:2vw;
   .project:hover .name {
     top: -110px;
   }
+  .project:active .name {
+    top: -110px;
+  }
 
   .row1 {
     margin-bottom: 1%;
@@ -1782,6 +1831,9 @@ left:2vw;
   }
 
   .project:hover .name {
+    top: -110px;
+  }
+  .project:active .name {
     top: -110px;
   }
 
@@ -1896,7 +1948,9 @@ left:2vw;
   .project:hover .name {
     top: -110px;
   }
-
+  .project:active .name {
+    top: -110px;
+  }
   .row1 {
     margin-bottom: 1%;
     width: 40%;
@@ -2006,7 +2060,9 @@ left:2vw;
   .project:hover .name {
     top: -110px;
   }
-
+  .project:active .name {
+    top: -110px;
+  }
   .row1 {
     margin-bottom: 1%;
     width: 40%;
@@ -2115,7 +2171,9 @@ left:2vw;
   .project:hover .name {
     top: -110px;
   }
-
+  .project:active .name {
+    top: -110px;
+  }
   .row1 {
     margin-bottom: 1%;
     width: 40%;
@@ -2216,7 +2274,9 @@ left:2vw;
   .project:hover .name {
     top: -140px;
   }
-
+  .project:active .name {
+    top: -140px;
+  }
   .row1 {
     margin-bottom: 1%;
     width: 50%;
@@ -2303,6 +2363,9 @@ left:2vw;
   }
 
   .project:hover .name {
+    top: -110px;
+  }
+  .project:active .name {
     top: -110px;
   }
 
